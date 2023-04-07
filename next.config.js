@@ -2,6 +2,6 @@
 
 module.exports = {
   images: {
-    domains: ['s3.us-west-2.amazonaws.com']
+    domains: ['portfolio-site01.s3.us-west-2.amazonaws.com']
   }
 };
