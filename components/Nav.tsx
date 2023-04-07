@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Header = () => {
+export const Nav = () => {
   return (
     <div className='nav-container'>
         <div className='logo'></div>
