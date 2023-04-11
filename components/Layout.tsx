@@ -13,7 +13,7 @@ export const Layout = ({ children }: LayoutProps) => {
         <title>Van Hien Tieu Dev</title>
       </Head>
       <Nav />
-      <main className="container">{children}</main>
+      <main className="main">{children}</main>
     </section>
   );
 };

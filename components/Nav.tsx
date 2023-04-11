@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export const Nav = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="flex justify-between align-center">
-      <div className="logo">
+    <nav
+      className={`nav flex justify-between align-center ${
+        isScrolled ? 'shrink' : ''
+      }`}
+    >
+      <div className="logo flex justify-center items-center">
         <Image
           src="https://portfolio-site01.s3.us-west-2.amazonaws.com/logo.png"
           alt="logo"
@@ -14,7 +34,7 @@ export const Nav = () => {
           height={50}
         />
       </div>
-      <div className="link flex justify-between w-64 items-center mr-5">
+      <div className="link flex justify-between items-center mr-8">
         <Link href="/home" className="text-white">
           Home
         </Link>
