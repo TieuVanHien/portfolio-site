@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+
 import Image from 'next/image';
 
 export const Home = () => {
@@ -21,7 +24,7 @@ export const Home = () => {
     fetchImageUrls();
   }, []);
   return (
-    <div className="card text-white font-mono text-xl">
+    <div className="card text-white font-mono flex-col flex justify-between text-2xl">
       <div className="text">
         <h1>Welcome to my portfolio site!</h1>
         <Typewriter
@@ -35,8 +38,9 @@ export const Home = () => {
           }}
         />
       </div>
-      <div className="contact-icon">
-        <Image src={imageUrls[0]} alt="" width={15} height={15} />
+      <div className="contact-icon flex justify-end mt-8">
+        <FontAwesomeIcon className="linkedin fa-2x mr-2" icon={faLinkedin} />
+        <FontAwesomeIcon className="github fa-2x" icon={faGithub} />
       </div>
     </div>
   );

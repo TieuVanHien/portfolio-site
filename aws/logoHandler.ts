@@ -7,21 +7,25 @@ exports.handler = async () => {
   });
 
   try {
-    //fetch logo image
+    //fetch all images
     const params = {
-      Bucket: 'portfolio-site01',
-      Key: 'logo.png'
+      Bucket: 'portfolio-site01'
     };
-    const url = await s3.getSignedUrlPromise('getObject', params);
+
+    const { Contents } = await s3.listObjectsV2(params).promise();
+    const urls = Contents.map(({}) =>
+      s3.getSignedUrlPromise('getObject', { Bucket: params.Bucket })
+    );
+    const images = await Promise.all(urls);
     return {
       statusCode: 200,
-      body: JSON.stringify({ url })
+      body: JSON.stringify({ images })
     };
   } catch (error) {
     console.error(error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: 'Error retrieving image' })
+      body: JSON.stringify({ message: 'Error retrieving images' })
     };
   }
 };
