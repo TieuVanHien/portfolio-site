@@ -10,7 +10,7 @@ export const Layout = ({ children }: LayoutProps) => {
   return (
     <section className="layout">
       <Head>
-        <title>Van Hien Tieu Dev</title>
+        <title>Van Hien Tieu | Software Developer</title>
       </Head>
       <Nav />
       <main className="main">{children}</main>
