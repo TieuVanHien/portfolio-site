@@ -1,12 +1,13 @@
 const AWS = require('aws-sdk');
 
-exports.handler = async (event: any, context: any, callback: any) => {
+exports.handler = async () => {
   const s3 = new AWS.S3({
     region: 'us-west-2',
     endpoint: 'portfolio-site01.s3.amazonaws.com'
   });
 
   try {
+    //fetch logo image
     const params = {
       Bucket: 'portfolio-site01',
       Key: 'logo.png'

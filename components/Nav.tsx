@@ -14,8 +14,8 @@ export const Nav = () => {
           height={50}
         />
       </div>
-      <div className="link flex justify-between w-64 items-center">
-        <Link href="/" className="text-white">
+      <div className="link flex justify-between w-64 items-center mr-5">
+        <Link href="/home" className="text-white">
           Home
         </Link>
         <Link href="/" className="text-white">
