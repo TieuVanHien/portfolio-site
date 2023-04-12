@@ -2,4 +2,4 @@ package:
   - "pages"
   - "styles"
   - "components"
-  - "sanity"
+  - "aws"
