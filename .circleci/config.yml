@@ -5,6 +5,7 @@ orbs:
 
 jobs:
   build:
+    working_directory: ~/pages
     executor: node/default
     steps:
      - run:
