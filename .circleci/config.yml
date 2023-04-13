@@ -7,10 +7,7 @@ jobs:
   build:
     executor: node/default
     steps:
-      - checkout
-      - node/install-packages:
-          package-lock-only: true
-      - run:
+     - run:
           name: Build
           command: npm run build
 
