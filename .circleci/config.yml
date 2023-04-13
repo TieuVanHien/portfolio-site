@@ -1,18 +1,20 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@4.7
+    node: circleci/node@5.0.1
 
 jobs:
-  build:
-    working_directory: ~/pages
-    executor: node/default
-    steps:
-     - run:
-          name: Build
-          command: npm run build
+    build:
+        working_directory: ~/portfolio-site
+        docker:
+            - image: cimg/node:17.2
+        steps:
+            - checkout:
+                  path: ~/portfolio-site
+            - node/install-packages
 
 workflows:
-  build:
-    jobs:
-      - build
+    build:
+        jobs:
+            - build
+    
