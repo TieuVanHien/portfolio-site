@@ -6,7 +6,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export const Home = () => {
   return (
-    <div className="container">
+    <div id="home" className="container">
       <div className="card text-white font-mono flex-col flex justify-between text-2xl">
         <div className="text">
           <h1>Welcome to my portfolio site!</h1>

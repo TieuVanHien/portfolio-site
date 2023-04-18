@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { ScrollLink } from '../components/Scroll';
 
-export const Nav = () => {
+interface NavProps {
+  scrollTarget: string;
+}
+
+export const Nav: React.FC<NavProps> = ({ scrollTarget }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -18,6 +22,12 @@ export const Nav = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const scrollTo = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const element = document.querySelector(scrollTarget);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <nav
@@ -35,18 +45,18 @@ export const Nav = () => {
         />
       </div>
       <div className="link flex justify-between items-center mr-8">
-        <Link href="/home" className="text-white">
+        <ScrollLink href="#home" className="text-white" onClick={scrollTo}>
           Home
-        </Link>
-        <Link href="/" className="text-white">
-          Project
-        </Link>
-        <Link href="/" className="text-white">
+        </ScrollLink>
+        <ScrollLink href="#skills" className="text-white" onClick={scrollTo}>
           Skills
-        </Link>
-        <Link href="/" className="text-white">
+        </ScrollLink>
+        <ScrollLink href="#project" className="text-white" onClick={scrollTo}>
+          Project
+        </ScrollLink>
+        <ScrollLink href="/" className="text-white" onClick={scrollTo}>
           Contact
-        </Link>
+        </ScrollLink>
       </div>
     </nav>
   );
