@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "echo 'No tests defined'"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -14,20 +15,20 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@types/node": "18.15.11",
-    "@types/react": "18.0.33",
+    "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
     "autoprefixer": "10.4.14",
-    "aws-sdk": "^2.1354.0",
+    "aws-sdk": "^2.1358.0",
     "eslint": "8.37.0",
     "eslint-config-next": "13.3.0",
     "next": "13.3.0",
-    "pnpm": "^8.1.1",
+    "pnpm": "^8.2.0",
     "postcss": "8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.61.0",
+    "sass": "^1.62.0",
     "tailwindcss": "3.3.1",
-    "typescript": "5.0.3",
+    "typescript": "5.0.4",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
