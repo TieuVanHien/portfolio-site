@@ -1,20 +1,40 @@
 import AWS from 'aws-sdk';
 
-const s3 = new AWS.S3({
-  accessKeyId: process.env.AWS_ACCESS_KEY,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+AWS.config.update({
+  accessKeyId: 'process.env.AWS_ACCESS_KEY_ID',
+  secretAccessKey: 'process.env.AWS_SECRET_ACCESS_KEY'
 });
 
-const bucketParams = {
-  Bucket: 'portfolio-site01',
-  Prefix: 'skills/'
-};
+export const handler = async () => {
+  const s3 = new AWS.S3({
+    region: 'us-west-2',
+    endpoint: 'techstack01.s3.amazonaws.com'
+  });
 
-s3.listObjects(bucketParams, (err, data) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(data.Contents);
-    // The Contents array contains the list of objects within the specified folder
+  try {
+    // fetch all images
+    const params: AWS.S3.ListObjectsV2Request = {
+      Bucket: 'techstacck01',
+      Prefix: 'skill/'
+    };
+
+    const { Contents } = await s3.listObjectsV2(params).promise();
+    if (!Contents) {
+      throw new Error('No contents found in S3 bucket');
+    }
+    const urls = Contents.map(({}) =>
+      s3.getSignedUrlPromise('getObject', { Bucket: params.Bucket })
+    );
+    const images = await Promise.all(urls);
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ images })
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ message: 'Error retrieving images' })
+    };
   }
-});
+};

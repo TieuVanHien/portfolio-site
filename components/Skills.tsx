@@ -22,7 +22,7 @@ export const Skills = () => {
       <div className="skills flex justify-center items-center  mt-16">
         <Image
           className="img1"
-          src="https://portfolio-site01.s3.amazonaws.com/skills/nextjs.svg"
+          src="https://techstack01.s3.amazonaws.com/skill/nextjs.svg"
           alt="aws"
           width={1}
           height={1}

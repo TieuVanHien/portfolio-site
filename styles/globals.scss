@@ -2,7 +2,6 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 @for $index from 1 through 6 {
@@ -23,6 +22,10 @@ body {
   font-size: 2.5em;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
+}
+.Typewriter__cursor {
+  color: white;
+  height: 100%;
 }
 
 .container {
