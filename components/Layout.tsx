@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import { Nav } from './Nav';
-import { motion, Variants, LazyMotion, domAnimation } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 interface LayoutProps {
@@ -9,48 +9,40 @@ interface LayoutProps {
 }
 
 export const Layout = ({ children }: LayoutProps) => {
+  const [ref, inView] = useInView({
+    threshold: 0.1, // trigger animation when the component is 10% visible
+    triggerOnce: true // only trigger the animation once
+  });
+
   const introHeaderVariants: Variants = {
-    hide: {
+    hidden: {
       opacity: 0,
-      x: -500
+      y: -20
     },
-    show: {
+    visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
-        duration: 2
+        duration: 0.8,
+        ease: 'easeOut'
       }
     }
   };
 
-  const { ref, inView } = useInView({
-    /* Optional options */
-    threshold: 0
-  });
-
   return (
-    <LazyMotion features={domAnimation}>
-      <div className="layout">
-        <Head>
-          <title>Van Hien Tieu | Software Developer</title>
-        </Head>
-        <Nav scrollTarget="" />
-        <div ref={ref}>
-          <motion.main
-            initial="hide"
-            animate={inView ? 'show' : 'hide'}
-            exit="hide"
-            variants={introHeaderVariants}
-            transition={{
-              duration: 0.8,
-              delay: 0.5,
-              ease: [0, 0.71, 0.2, 1.01]
-            }}
-          >
-            {children}
-          </motion.main>
-        </div>
-      </div>
-    </LazyMotion>
+    <div className="layout">
+      <Head>
+        <title>Van Hien Tieu | Software Developer</title>
+      </Head>
+      <Nav scrollTarget="" />
+      <motion.main
+        ref={ref}
+        variants={introHeaderVariants}
+        initial="hidden"
+        animate={inView ? 'visible' : 'hidden'}
+      >
+        {children}
+      </motion.main>
+    </div>
   );
 };
