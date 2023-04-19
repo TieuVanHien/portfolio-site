@@ -10,9 +10,7 @@
     "test": "echo 'No tests defined'"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
@@ -21,6 +19,7 @@
     "aws-sdk": "^2.1358.0",
     "eslint": "8.37.0",
     "eslint-config-next": "13.3.0",
+    "framer-motion": "^10.12.4",
     "next": "13.3.0",
     "pnpm": "^8.2.0",
     "postcss": "8.4.21",
