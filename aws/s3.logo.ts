@@ -11,14 +11,17 @@ exports.handler = async () => {
       Key: 'logo.png'
     };
 
-    const { Body } = await s3.getObject(params).promise();
-    const image = Body.toString('base64');
+    const data = await s3.getObject(params).promise();
+    if (!data.Body) {
+      throw new Error('Body is undefined');
+    }
+    const image = data.Body.toString('base64');
 
     return {
       statusCode: 200,
       headers: {
         'Content-Type': 'image/png',
-        'Content-Length': image.length.toString(),
+        'Content-Length': image.length.toString()
       },
       isBase64Encoded: true,
       body: image
