@@ -12,6 +12,18 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: auto;
+}
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 5px;
+}
+
 body {
   background-color: black;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -60,7 +72,7 @@ body {
     transition: text-shadow 0.3s ease-in-out;
     transition: font-size 0.1s ease;
     &:hover {
-      font-size: 1.5em;
+      font-size: 1.3em;
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f0f,
         0 0 70px #f0f, 0 0 80px #f0f, 0 0 100px #f0f;
     }
