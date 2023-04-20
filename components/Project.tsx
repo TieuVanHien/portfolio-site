@@ -31,7 +31,9 @@ export const Project = ({ projects }: ProjectProps) => {
           <div className="details flex flex-col justify-between items-start">
             <h1>{project.title}</h1>
             <h3>Technologies: {project.techstack}</h3>
-            <Link href={project.repo}>View on GitHub {'>'} </Link>
+            <Link target="blank" className="repo-link" href={project.repo}>
+              View On GitHub {'>'}
+            </Link>
           </div>
         </div>
       ))}
