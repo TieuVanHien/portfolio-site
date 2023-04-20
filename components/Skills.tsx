@@ -1,25 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import Typewriter from 'typewriter-effect';
+import { Typing } from '../components/Typing';
 
 export const Skills = () => {
   return (
     <div id="skills" className="container flex-col justify-evenly">
-      <Typewriter
-        onInit={(typewriter) => {
-          typewriter
-            .typeString('Some Of My Tech Stacks </>')
-            .changeDelay(5)
-            .callFunction(() => {})
-            .pauseFor(2500)
-            .start();
-        }}
-        options={{
-          wrapperClassName: 'typing-skill'
-        }}
-      />
-
-      <div className="skills flex justify-center items-center  mt-16">
+      <Typing text="Some Of My Tech Stacks </>" />
+      <div className="skills flex justify-center items-center  mt-8">
         <Image
           className="img1"
           src="https://techstack01.s3.amazonaws.com/skill/nextjs.svg"

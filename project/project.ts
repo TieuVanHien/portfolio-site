@@ -1,7 +1,6 @@
 import coversy from './coversy.gif';
 import caravelle from './caravelle.gif';
 import cakestore from './cakestore.gif';
-import scss from './scss.png';
 
 export const projects = [
   {
@@ -25,12 +24,5 @@ export const projects = [
     img: cakestore,
     techstack:
       'Next.js, Stripe, Babel, Sanity CMS, Figma, SCSS, Tailwindcss, Docker'
-  },
-  {
-    _id: '4',
-    title: 'SCSS Boilerplate',
-    repo: 'https://github.com/TieuVanHien/SCSS-boilerplate',
-    img: scss,
-    techstack: 'scss'
   }
 ];

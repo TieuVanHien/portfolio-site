@@ -36,6 +36,7 @@ export const Layout = ({ children }: LayoutProps) => {
       </Head>
       <Nav scrollTarget="" />
       <motion.main
+        className="flex justify-center items-center"
         ref={ref}
         variants={introHeaderVariants}
         initial="hidden"
