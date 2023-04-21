@@ -26,8 +26,10 @@ jobs:
           npm install
           npm run build --if-present
           
-      - name: Zip artifact for deployment
-        run: zip release.zip ./* -r  
+      - name: Compress files
+        run: |
+           zip -r myfiles.zip ./dist/*
+           mv myfiles.zip $(Build.ArtifactStagingDirectory)  
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -54,8 +56,9 @@ jobs:
         with:
           name: node-app
           
-      - name: unzip artifact for deployment
-        run: unzip release.zip
+      - name: Unzip files
+        run: |
+          unzip $(Build.ArtifactStagingDirectory)/myfiles.zip -d ./unzipped-files
         
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
