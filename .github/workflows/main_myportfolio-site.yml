@@ -47,8 +47,8 @@ jobs:
              
       - name: Check Azure credentials
         run: |
-         echo "${{ secrets.AZURE_CREDENTIALS }}" | base64 --decode
-         echo "${{ secrets.AZURE_TENANT_ID }}" | base64 --decode
+         echo "${{ secrets.AZURE_CREDENTIALS }}"
+         echo "${{ secrets.AZURE_TENANT_ID }}"
 
       - name: Azure Login
         uses: azure/login@v1
