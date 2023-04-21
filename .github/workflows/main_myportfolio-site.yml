@@ -44,11 +44,18 @@ jobs:
         run: |
             curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
              az --version
+             
+      - name: Check Azure credentials
+        run: |
+         echo "${{ secrets.AZURE_CREDENTIALS }}" | base64 --decode
+         echo "${{ secrets.AZURE_TENANT_ID }}" | base64 --decode
+
       - name: Azure Login
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+           creds: ${{ secrets.AZURE_CREDENTIALS }}
+           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+
           
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
