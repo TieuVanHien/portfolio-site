@@ -47,14 +47,18 @@ jobs:
              
       - name: Check Azure credentials
         run: |
-         echo "${{ secrets.AZURE_CREDENTIALS }}"
+         echo "${{ secrets.AZURE_CLIENT_SECRET }}"
          echo "${{ secrets.AZURE_TENANT_ID }}"
+         echo "${{ secrets.AZURE_CLIENT_ID }}"
+         echo "${{ secrets.AZURE_SUBCRIPTION_ID }}"
 
       - name: Azure Login
         uses: azure/actions/login@v1
         with:
-           creds: ${{ secrets.AZURE_CREDENTIALS }}
+           client-id: ${{ secrets.AZURE_CLIENT_ID }}
            tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+           client-secret-id: ${{ secrets.AZURE_CLIENT_SECRET }}
+           subcription-id: ${{ secrets.AZURE_SUBCRIPTION_ID }}
 
           
       - name: Download artifact from build job
