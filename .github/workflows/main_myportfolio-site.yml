@@ -55,10 +55,7 @@ jobs:
       - name: Azure Login
         uses: azure/actions/login@v1
         with:
-           client-id: ${{ secrets.AZURE_CLIENT_ID }}
-           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-           client-secret-id: ${{ secrets.AZURE_CLIENT_SECRET }}
-           subcription-id: ${{ secrets.AZURE_SUBCRIPTION_ID }}
+            creds: ${{ secrets.AZURE_CREDENTIALS }}
 
           
       - name: Download artifact from build job
@@ -71,6 +68,6 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'myportfolio-site'
-          slot-name: 'Production'
+          slot: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0A90FF60E61549A8A126572B05EA7A61 }}
           package: .
