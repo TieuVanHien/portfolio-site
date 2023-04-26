@@ -81,6 +81,6 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'myportfolio-site'
-          slot: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0A90FF60E61549A8A126572B05EA7A61 }}
-          package: .
+          package: ./release.zip
+          resource-group-name: projects
