@@ -73,7 +73,7 @@ jobs:
           unzip -q release.zip -d next-app
       - name: Clean up temp folder
         run: |
-          rm -rf /tmp/*
+          sudo rm -rf /tmp/*
           mkdir -p /tmp/zipdeploy
 
       - name: 'Deploy to Azure Web App'
