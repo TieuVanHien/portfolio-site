@@ -26,20 +26,23 @@ jobs:
           npm install
           npm run build --if-present
 
+     - name: Create zip archive for deployment
+        run: |
+          Compress-Archive -Path ./* -DestinationPath release.zip
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
-          name: node-app
-          path: ./dist
+          name: next-app
+          path: .
 
       - name: OIDC Login to Azure Public Cloud with AzPowershell (enableAzPSSession true)
         uses: azure/actions/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-          enable-AzPSSession: true
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: window-latest
     needs: build
     environment:
       name: 'Production'
@@ -59,11 +62,15 @@ jobs:
         uses: azure/actions/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-
+    
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
-          name: node-app
+          name: next-app
+
+      - name: Extract archive
+        run: |
+          unzip -q next-app.zip -d next-app        
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
