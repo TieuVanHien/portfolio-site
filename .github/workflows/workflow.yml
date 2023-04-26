@@ -26,7 +26,7 @@ jobs:
           npm install
           npm run build --if-present
 
-     - name: Create zip archive for deployment
+      - name: Create zip archive for deployment
         run: |
           Compress-Archive -Path ./* -DestinationPath release.zip
 
@@ -62,7 +62,7 @@ jobs:
         uses: azure/actions/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-    
+
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
@@ -70,7 +70,7 @@ jobs:
 
       - name: Extract archive
         run: |
-          unzip -q next-app.zip -d next-app        
+          unzip -q next-app.zip -d next-app
       - name: Clean up temp folder
         run: |
           rm -rf /tmp/*
