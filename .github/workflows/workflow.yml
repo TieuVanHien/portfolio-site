@@ -71,6 +71,10 @@ jobs:
       - name: Extract archive
         run: |
           unzip -q next-app.zip -d next-app        
+      - name: Clean up temp folder
+        run: |
+          rm -rf /tmp/*
+          mkdir -p /tmp/zipdeploy
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
