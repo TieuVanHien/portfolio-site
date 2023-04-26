@@ -70,7 +70,7 @@ jobs:
 
       - name: Extract archive
         run: |
-          unzip -q next-app.zip -d next-app
+          unzip -q release.zip -d next-app
       - name: Clean up temp folder
         run: |
           rm -rf /tmp/*
