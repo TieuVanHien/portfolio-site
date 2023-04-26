@@ -12,6 +12,13 @@
   }
 }
 
+body {
+  background-color: black;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+  color: white;
+}
+//scrollbar
 ::-webkit-scrollbar {
   width: 0.5em;
   height: auto;
@@ -23,13 +30,7 @@
   background-color: white;
   border-radius: 5px;
 }
-
-body {
-  background-color: black;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
-  color: white;
-}
+//typewriter-effect
 .typing-skill {
   font-size: 2.5em;
 }
@@ -37,7 +38,12 @@ body {
   color: white;
   height: 100%;
 }
-
+//Fomr
+form {
+  input {
+    color: black;
+  }
+}
 .wrapper {
   max-width: 95%;
 }
