@@ -1,7 +1,4 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: Build and deploy to Azure Web App - myportfolio-site
+name: Build and Deploy to Vercel - myportfolio-site
 
 on:
   push:
@@ -10,77 +7,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: windows-latest
+  build-and-deploy:
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: '16.x'
 
-      - name: npm install, build
-        run: |
-          npm install
-          npm run build --if-present
+      - name: Install Vercel CLI
+        run: npm install -g vercel
 
-      - name: Create zip archive for deployment
-        run: |
-          Compress-Archive -Path ./* -DestinationPath release.zip
+      - name: Log in to Vercel
+        run: vercel login
 
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
-        with:
-          name: next-app
-          path: .
-
-      - name: OIDC Login to Azure Public Cloud with AzPowershell (enableAzPSSession true)
-        uses: azure/actions/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-  deploy:
-    runs-on: window-latest
-    needs: build
-    environment:
-      name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    steps:
-      - name: Install Azure CLI
-        run: |
-          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-           az --version
-
-      - name: Check Azure credentials
-        run: |
-          echo "${{ secrets.AZURE_CREDENTIALS }}"
-
-      - name: Azure Login
-        uses: azure/actions/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
-        with:
-          name: next-app
-
-      - name: Extract archive
-        run: |
-          unzip -q next-app.zip -d next-app
-      - name: Clean up temp folder
-        run: |
-          rm -rf /tmp/*
-          mkdir -p /tmp/zipdeploy
-
-      - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v2
-        id: deploy-to-webapp
-        with:
-          app-name: 'myportfolio-site'
-          slot: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0A90FF60E61549A8A126572B05EA7A61 }}
-          package: .
+      - name: Deploy to Vercel
+        run: vercel --prod
