@@ -37,7 +37,7 @@ export const Nav: React.FC<NavProps> = ({ scrollTarget }) => {
     >
       <div className="logo flex justify-center items-center">
         <Image
-          src="https://portfolio-site01.s3.us-west-2.amazonaws.com/logo.png"
+          src="https://techstack01.s3.us-west-2.amazonaws.com/logo.svg"
           alt="logo"
           className="w-40"
           width={100}
