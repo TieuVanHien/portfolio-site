@@ -25,7 +25,7 @@ jobs:
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: vercel --confirm --env preview-$GITHUB_SHA deploy --prod --meta env=preview-$GITHUB_SHA --build-env GITHUB_SHA=$GITHUB_SHA --build-env GITHUB_REF=$GITHUB_REF --token $VERCEL_TOKEN
+        run: vercel --confirm --env preview-$GITHUB_SHA deploy --prod --meta env=preview-$GITHUB_SHA --build-env GITHUB_SHA=$GITHUB_SHA --build-env GITHUB_REF=$GITHUB_REF --token ${VERCEL_TOKEN}
 
   Deploy-Production:
     runs-on: ubuntu-latest
