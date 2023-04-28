@@ -10,7 +10,7 @@
     "test": "echo 'No tests defined'"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.5.5",
+    "@chakra-ui/react": "^2.6.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
