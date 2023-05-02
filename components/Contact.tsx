@@ -26,6 +26,23 @@ export const Contact = () => {
   };
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    try {
+      const res = await fetch('/api/sendgrid', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, message })
+      });
+      // If the request is successful, clear the input fields
+      if (res.ok) {
+        setName('');
+        setEmail('');
+        setMessage('');
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -76,7 +93,9 @@ export const Contact = () => {
             {errorMessage}
           </FormErrorMessage>
         </FormControl>
-        <button disabled={submit}>Submit</button>
+        <button disabled={submit} onClick={handleSubmit}>
+          Submit
+        </button>
       </form>
     </div>
   );
