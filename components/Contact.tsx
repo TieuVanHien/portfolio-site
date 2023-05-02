@@ -26,20 +26,6 @@ export const Contact = () => {
   };
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    const data = {
-      name,
-      email,
-      message
-    };
-    const res = await fetch('/api/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
-    const result = await res.json();
-    console.log(result);
   };
 
   return (
