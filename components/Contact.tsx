@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Typing } from '../components/Typing';
 
 export const Contact = () => {
   const [name, setName] = useState('');
@@ -43,6 +44,7 @@ export const Contact = () => {
 
   return (
     <div>
+      <Typing text="Contact Me!!" />
       <form className="flex flex-col" onSubmit={handleSubmit}>
         <label className="text-white">Name</label>
         <input
