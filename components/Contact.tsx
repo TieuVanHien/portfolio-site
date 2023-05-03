@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Contact = () => {
   const [name, setName] = useState('');
@@ -8,9 +10,9 @@ export const Contact = () => {
 
   const handleValid = () => {
     if (name && email && message) {
-      setDisable(true);
-    } else {
       setDisable(false);
+    } else {
+      setDisable(true);
     }
   };
 
@@ -31,6 +33,8 @@ export const Contact = () => {
         setName('');
         setEmail('');
         setMessage('');
+        setDisable(true);
+        toast.success('Thanks for submitting the form!');
       }
     } catch (error) {
       console.log(error);
