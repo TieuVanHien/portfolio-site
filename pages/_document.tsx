@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link
           rel="icon"
-          href="https://portfolio-site01.s3.us-west-2.amazonaws.com/logo.png"
+          href="https://techstack01.s3.us-west-2.amazonaws.com/logo.svg"
         />
       </Head>
       <body>
