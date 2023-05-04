@@ -8,7 +8,6 @@
   h#{$index} {
     margin: 0;
     line-height: 1.6;
-    font-size: auto;
   }
 }
 
@@ -17,6 +16,11 @@ body {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
   color: white;
+}
+h1 {
+  opacity: 70%;
+  font-weight: 600;
+  text-shadow: 0.125rem 0.125rem 1.25rem rgba(255, 255, 255, 0.5);
 }
 //scrollbar
 ::-webkit-scrollbar {
@@ -37,12 +41,6 @@ body {
 .Typewriter__cursor {
   color: white;
   height: 100%;
-}
-//Fomr
-form {
-  input {
-    color: black;
-  }
 }
 .wrapper {
   max-width: 95%;
@@ -70,21 +68,27 @@ form {
     height: 12%;
     padding: 10px 0;
   }
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
-  font-weight: normal;
-  font-style: normal;
   a {
-    transition: text-shadow 0.3s ease-in-out;
-    transition: font-size 0.1s ease;
-    &:hover {
-      font-size: 1.3em;
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f0f,
-        0 0 70px #f0f, 0 0 80px #f0f, 0 0 100px #f0f;
-    }
+    font-size: 1.3em;
+    padding: 0.5em 1em 0.5em 1em;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  a {
+    margin-left: 0.5em;
+    width: 7em;
+    box-shadow: inset 0 0 0 0 #5dbea3;
+    color: white;
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  a:hover {
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #5dbea3;
   }
   .link {
     width: 20%;
+    margin-right: 10em;
   }
   .logo img {
     width: 5em;
@@ -92,6 +96,7 @@ form {
     margin-left: 2em;
   }
 }
+
 .wrapper {
   height: 100%;
   width: 100%;
@@ -220,6 +225,9 @@ form {
       .info-heading {
         h1 {
           width: 60%;
+          opacity: 70%;
+          font-weight: 600;
+          text-shadow: 0.125rem 0.125rem 1.25rem rgba(255, 255, 255, 0.5);
         }
         h2 {
           width: 60%;
