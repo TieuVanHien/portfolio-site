@@ -14,7 +14,7 @@ export const handler = async () => {
   try {
     // fetch all images
     const params: AWS.S3.ListObjectsV2Request = {
-      Bucket: 'techstacck01',
+      Bucket: 'techstack01',
       Prefix: 'skill/'
     };
 

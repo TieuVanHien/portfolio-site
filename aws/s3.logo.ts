@@ -7,7 +7,7 @@ exports.handler = async () => {
 
   try {
     const params = {
-      Bucket: 'portfolio-site01',
+      Bucket: 'techstack01',
       Key: 'logo.png'
     };
 
