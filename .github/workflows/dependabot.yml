@@ -1,12 +1,23 @@
-version: 2
-updates:
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    open-pull-requests-limit: 5
-    labels:
-      - "dependencies"
-    ignore:
-      - dependency-name: "package-name"
-    target-branch: "main"
+name: Dependabot
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Dependabot
+        uses: dependabot/dependabot-core-action@v2.3.0
+        with:
+          directory: '/'
+          package-ecosystem: 'npm'
+          schedule: 'daily'
+          open-pull-requests-limit: 5
+          target-branch: 'main'
+          labels: 'dependencies'
+          ignore: 'package-name'
