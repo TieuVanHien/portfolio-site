@@ -54,7 +54,7 @@ export const Nav: React.FC<NavProps> = ({ scrollTarget }) => {
         <ScrollLink href="#projects" className="text-white" onClick={scrollTo}>
           Project
         </ScrollLink>
-        <ScrollLink href="/" className="text-white" onClick={scrollTo}>
+        <ScrollLink href="#contact" className="text-white" onClick={scrollTo}>
           Contact
         </ScrollLink>
       </div>
