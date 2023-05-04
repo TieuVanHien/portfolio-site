@@ -168,7 +168,9 @@ export const Contact = () => {
               Submit
             </Button>
           )}
-          <h1>*Please fill out all required information before submitting</h1>
+          <h1 className="text-center">
+            *Please fill out all required information before submitting
+          </h1>
         </form>
       </div>
     </div>
