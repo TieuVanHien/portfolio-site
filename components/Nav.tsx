@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { ScrollLink } from '../components/Scroll';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 interface NavProps {
   scrollTarget: string;
 }
 
-export const Nav: React.FC<NavProps> = ({ scrollTarget }) => {
+export const Nav: React.FC<NavProps> = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -23,12 +25,6 @@ export const Nav: React.FC<NavProps> = ({ scrollTarget }) => {
     };
   }, []);
 
-  const scrollTo = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    const element = document.querySelector(scrollTarget);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <nav
       className={`nav flex justify-between align-center ${
@@ -44,19 +40,16 @@ export const Nav: React.FC<NavProps> = ({ scrollTarget }) => {
           height={50}
         />
       </div>
-      <div className="link flex justify-between items-center mr-8">
-        <ScrollLink href="#home" className="text-white" onClick={scrollTo}>
-          Home
-        </ScrollLink>
-        <ScrollLink href="#skills" className="text-white" onClick={scrollTo}>
-          Skills
-        </ScrollLink>
-        <ScrollLink href="#projects" className="text-white" onClick={scrollTo}>
-          Project
-        </ScrollLink>
-        <ScrollLink href="#contact" className="text-white" onClick={scrollTo}>
-          Contact
-        </ScrollLink>
+      <div className="contact-icon flex justify-center items-center mr-8">
+        <Link
+          href="https://www.linkedin.com/in/van-hien-tieu-4532041b7/"
+          target="_blank"
+        >
+          <FontAwesomeIcon className="linkedin fa-2x mr-2" icon={faLinkedin} />
+        </Link>
+        <Link href="https://github.com/TieuVanHien" target="_blank">
+          <FontAwesomeIcon className="github fa-2x" icon={faGithub} />
+        </Link>
       </div>
     </nav>
   );
