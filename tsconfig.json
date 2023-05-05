@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
+    "target": "es6",
+    "module": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
