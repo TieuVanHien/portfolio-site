@@ -1,22 +1,29 @@
 name: Dependabot
 
 on:
+  push:
+    branches: [ main ]
   schedule:
     - cron: '0 9 * * *' 
 
 jobs:
-  update:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Dependabot
-        uses: dependabot/dependabot-core-action@v2.5.2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2.5.0
         with:
-          directory: '/'
-          package-ecosystem: 'npm'
-          schedule: 'daily'
-          open-pull-requests-limit: 5
-          target-branch: 'main'
-          labels: 'dependencies'
+          node-version: '18.x'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Dependabot
+        uses: dependabot/dependabot-action@v2.7.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: .github/workflows/dependabot.yml
