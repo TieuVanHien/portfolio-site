@@ -1,29 +1,38 @@
-name: Dependabot
+name: Dependabot fetch metadata
 
 on:
+  pull_request:
   push:
-    branches: [ main ]
+    branches:
+      - main
   schedule:
-    - cron: '0 9 * * *' 
+    - cron: '0 9 * * *'
+
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
 
 jobs:
-  build:
+  dependabot:
     runs-on: ubuntu-latest
-
+    if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2.5.0
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
         with:
-          node-version: '18.x'
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Dependabot
-        uses: dependabot/dependabot-action@latest
+      - name: Create Dependabot PR
+        if: steps.metadata.outputs.has_updates == 'true'
+        uses: peter-evans/create-pull-request@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          config-file: .github/workflows/dependabot.yml
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: dependabot/npm_and_yarn/*
+          title: 'Dependabot: Update dependencies'
+          body: 'This pull request updates dependencies using Dependabot.'
+          labels: 'dependencies'
+          base: 'main'
+          draft: true
+          maintainers-can-modify: true
