@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Dependabot
-        uses: dependabot/dependabot-action@v2.7.4
+        uses: dependabot/dependabot-action@latest
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           config-file: .github/workflows/dependabot.yml
