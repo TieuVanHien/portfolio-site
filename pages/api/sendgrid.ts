@@ -19,7 +19,7 @@ export const SendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
     }: { name: EmailData; email: EmailData; message: EmailData } = req.body;
     const body = {
       to: 'tieuvanhien01@gmail.com',
-      from: `${email}`,
+      from: 'tieuvanhien01@gmail.com',
       subject: `${name} sent you a message from your portfolio site`,
       text: `Email => ${email}`,
       html: `<p>Name: ${name}</p>
