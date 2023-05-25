@@ -6,11 +6,7 @@ module.exports = {
     path.join(__dirname, './components/*.{ts,tsx}')
   ],
   theme: {
-    extend: {
-      spacing: {
-        5: '5em'
-      }
-    }
+    extend: {}
   },
   plugins: []
 };
