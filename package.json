@@ -39,7 +39,7 @@
     "@types/aws-sdk": "^2.7.0",
     "@types/next": "^9.0.0",
     "@types/node": "^20.4.2",
-    "@types/react": "^18.2.14",
+    "@types/react": "^18.2.17",
     "@types/react-dom": "^18.2.7",
     "ts-loader": "^9.4.4",
     "typescript": "^5.1.6"
