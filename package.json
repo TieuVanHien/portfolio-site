@@ -21,7 +21,7 @@
     "@mui/styled-engine-sc": "^5.12.0",
     "@sendgrid/mail": "^7.7.0",
     "autoprefixer": "10.4.14",
-    "aws-sdk": "^2.1419.0",
+    "aws-sdk": "^2.1424.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "next": "13.4.10",
