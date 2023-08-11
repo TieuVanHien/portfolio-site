@@ -23,7 +23,7 @@
     "autoprefixer": "10.4.14",
     "aws-sdk": "^2.1434.0",
     "eslint": "8.46.0",
-    "eslint-config-next": "13.4.12",
+    "eslint-config-next": "13.4.13",
     "next": "13.4.12",
     "pnpm": "^8.6.12",
     "postcss": "8.4.27",
