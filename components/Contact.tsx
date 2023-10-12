@@ -34,7 +34,6 @@ export const Contact = () => {
         },
         body: JSON.stringify({ name, email, message })
       });
-      // If the request is successful, clear the TextField  fields
       if (res.ok) {
         setName('');
         setEmail('');
