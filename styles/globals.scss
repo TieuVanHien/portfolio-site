@@ -73,6 +73,17 @@ h1 {
     height: 5em;
     margin-left: 2em;
   }
+  .contact-icon {
+    display: flex;
+    .icon {
+      width: 3em;
+      height: 3em;
+      img {
+        width: 2em;
+        height: 2em;
+      }
+    }
+  }
 }
 .wrapper {
   height: 100%;
