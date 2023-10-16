@@ -1,0 +1,41 @@
+.nav {
+  position: fixed;
+  height: 16%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  &.shrink {
+    height: 12%;
+    padding: 10px 0;
+  }
+  .logo img {
+    width: 5em;
+    height: 5em;
+    margin-left: 2em;
+  }
+  .contact-icon {
+    display: flex;
+    .icon {
+      margin: 0.2em;
+    }
+  }
+  .linkedin:hover {
+    color: #0a66c2;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .github {
+    border-radius: 50%;
+    &:hover {
+      color: black;
+      background-color: white;
+      cursor: pointer;
+      transition: all 0.5s ease;
+    }
+  }
+}

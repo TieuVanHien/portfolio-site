@@ -1,4 +1,5 @@
-// styles/index.scss
+@use './mixin.scss' as *;
+@use './section/' as *;
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -12,6 +13,7 @@
 }
 
 body {
+  width: 100%;
   background-color: black;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
@@ -35,15 +37,10 @@ h1 {
   background-color: white;
   border-radius: 5px;
 }
-//typewriter-effect
-.typing-skill {
-  font-size: 2.5em;
-}
-.Typewriter__cursor {
-  color: white;
-  height: 100%;
-}
+
 .wrapper {
+  height: 100%;
+  width: 100%;
   max-width: 95%;
   height: auto;
   min-height: 100vh;
@@ -54,39 +51,6 @@ h1 {
   width: 100%;
   height: 100vh;
 }
-/* Nav bar */
-.nav {
-  position: fixed;
-  height: 16%;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
-  &.shrink {
-    height: 12%;
-    padding: 10px 0;
-  }
-  .logo img {
-    width: 5em;
-    height: 5em;
-    margin-left: 2em;
-  }
-  .contact-icon {
-    display: flex;
-    .icon {
-      margin: 0.2em;
-    }
-  }
-}
-.wrapper {
-  height: 100%;
-  width: 100%;
-}
-/* footer */
 .footer {
   margin-top: 10em;
   height: 5vh;
@@ -103,175 +67,4 @@ h1 {
   -webkit-backdrop-filter: blur(12px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-/*Contact icons */
-.linkedin:hover {
-  color: #0a66c2;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.github {
-  border-radius: 50%;
-  &:hover {
-    color: black;
-    background-color: white;
-    cursor: pointer;
-    transition: all 0.5s ease;
-  }
-}
-/* skills images */
-.skills {
-  img {
-    background-color: white;
-    width: 7em;
-    height: 7em;
-    padding: 1em;
-    border-radius: 0.5em;
-  }
-}
-//projects
-.projects {
-  width: 100%;
-  height: auto;
-  flex-direction: column;
-  .frame {
-    width: 100%;
-    max-width: 70%;
-    img {
-      width: 50%;
-      height: 18em;
-    }
-    .details {
-      width: 45%;
-      height: 15em;
-      padding: 2em;
-      margin-left: 3em;
-      border-radius: 10px;
-      a {
-        text-align: center;
-        padding: 5px;
-        text-transform: capitalize;
-        position: relative;
-        transition: 0.5s;
-      }
-      a::before,
-      a::after {
-        content: '';
-        position: absolute;
-        transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
-      }
-      a::before {
-        left: 0;
-        z-index: -1;
-      }
-      a::after {
-        right: 0;
-        z-index: -2;
-      }
-      a:hover {
-        color: black;
-      }
-      a:hover::before,
-      a:hover::after {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        background-color: white;
-      }
-      a:hover::before {
-        top: 0;
-      }
-      a:hover::after {
-        right: -0.4em;
-        filter: brightness(0.8);
-      }
-      h1 {
-        font-size: x-large;
-      }
-      &:hover {
-        margin-bottom: 0.5em;
-        -webkit-box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-        -moz-box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-        box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-        transition: 0.3s ease-out;
-      }
-    }
-  }
-}
-
-//Contact component
-.contact {
-  margin-top: 10em;
-  .contact-med {
-    width: 100%;
-    height: 100%;
-    .info {
-      margin-top: 10em;
-      width: 50%;
-      height: 100%;
-      .info-heading {
-        h1 {
-          width: 60%;
-          opacity: 70%;
-          font-weight: 600;
-          text-shadow: 0.125rem 0.125rem 1.25rem rgba(255, 255, 255, 0.5);
-        }
-        h2 {
-          width: 60%;
-        }
-      }
-      .social-info {
-        margin-top: 10em;
-        .phone-icon {
-          width: 1em;
-          height: 1em;
-          svg:hover path {
-            -webkit-box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-            -moz-box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-            box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-            transition: 0.3s ease-out;
-          }
-        }
-        .email-icon {
-          width: 1em;
-          height: 1em;
-          svg:hover path {
-            -webkit-box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-            -moz-box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-            box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-            transition: 0.3s ease-out;
-          }
-        }
-      }
-    }
-    .form {
-      height: 75%;
-      width: 40%;
-      border-radius: 5px;
-      -webkit-box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-      -moz-box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-      box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-      transition: 0.3s ease-out;
-      label {
-        color: #f4db7d;
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-          'Liberation Mono', 'Courier New', monospace;
-      }
-      .button {
-        background-color: #5dbea3;
-        width: 80%;
-        height: 4em;
-      }
-      .input {
-        width: 80%;
-      }
-      .button-disabled {
-        width: 80%;
-        color: #656565;
-        border: 0.5px solid wheat;
-        height: 4em;
-      }
-    }
-  }
 }
