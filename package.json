@@ -34,7 +34,7 @@
     "sharp": "^0.32.6",
     "styled-components": "^5.3.11",
     "tailwindcss": "3.3.5",
-    "typewriter-effect": "^2.20.1"
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/aws-sdk": "^2.7.0",
