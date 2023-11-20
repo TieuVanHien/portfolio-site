@@ -41,7 +41,7 @@
     "@types/next": "^9.0.0",
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.31",
-    "@types/react-dom": "^18.2.13",
+    "@types/react-dom": "^18.2.15",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2"
   }
