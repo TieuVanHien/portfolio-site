@@ -20,7 +20,7 @@
     "@mui/styled-engine-sc": "^5.12.0",
     "@sendgrid/mail": "^8.1.0",
     "autoprefixer": "10.4.16",
-    "aws-sdk": "^2.1509.0",
+    "aws-sdk": "^2.1526.0",
     "eslint": "8.53.0",
     "eslint-config-next": "14.0.4",
     "next": "14.0.4",
