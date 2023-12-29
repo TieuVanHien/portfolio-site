@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import { Typing } from '../components/Typing';
+import { Typing } from '@/components/Typing';
 
 interface ProjectProps {
   projects: {
