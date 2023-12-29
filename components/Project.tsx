@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import { Typing } from '@/components/Typing';
 
 interface ProjectProps {
   projects: {
@@ -16,7 +15,7 @@ interface ProjectProps {
 export const Project = ({ projects }: ProjectProps) => {
   return (
     <div id="projects" className="projects flex justify-evenly items-center">
-      <Typing text="My Projects" />
+      <h1>My Projects</h1>
       {projects.map((project) => (
         <div
           className="frame flex justify-between items-center m-16"

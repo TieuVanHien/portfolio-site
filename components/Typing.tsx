@@ -1,49 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import Typewriter, { TypewriterClass } from 'typewriter-effect';
+import React, { useEffect } from 'react';
+import Typed from 'typed.js';
 
-interface TypeProps {
-  text: string;
-  speed?: number;
-  delay?: number;
-  className?: string;
-}
-
-export const Typing = ({
-  text,
-  speed = 500,
-  delay = 50,
-  className = 'typing-skill'
-}: TypeProps) => {
-  const [currentText, setCurrentText] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-
-  const options = {
-    delay,
-    speed
-  };
-
-  const onInit = (typewriter: TypewriterClass) => {
-    typewriter.typeString(text).start();
-  };
-
+export const TypingComponent = () => {
   useEffect(() => {
-    const type = async () => {
-      if (currentText.length < text.length) {
-        if (!isTyping) {
-          setIsTyping(true);
-        }
-
-        setCurrentText(text.slice(0, currentText.length + 1));
-      }
+    const options = {
+      strings: [
+        'Hello, World!',
+        'I love building things for web app.',
+        'Coding with love.',
+        'Feel free to reach me!'
+      ],
+      typeSpeed: 50,
+      backSpeed: 40,
+      loop: true
     };
-    type().catch((err) => console.log(err));
-  }, [currentText.length, text, speed, delay, isTyping]);
 
-  return (
-    <div className={className}>
-      <h1>
-        <Typewriter onInit={onInit} options={options} />
-      </h1>
-    </div>
-  );
+    const typed = new Typed('.typing-element', options);
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
+  return <span className="typing-element"></span>;
 };

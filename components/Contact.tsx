@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Typing } from '../components/Typing';
 import { TextField, Button } from '@mui/material';
 
 export const Contact = () => {
@@ -49,7 +48,6 @@ export const Contact = () => {
       id="contact"
       className="container contact flex flex-col justify-evenly items-center"
     >
-      <Typing text="Contact Me!!" />
       <div className="contact-med flex justify-center items-center">
         <div className="info flex flex-col justify-start">
           <div className="info-heading">
