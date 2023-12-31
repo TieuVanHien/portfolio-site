@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { TextField, Button } from '@mui/material';
 
 export const Contact = () => {
   const [name, setName] = useState('');
@@ -108,90 +107,42 @@ export const Contact = () => {
           className="form flex flex-col justify-evenly items-center"
           onSubmit={handleSubmit}
         >
-          <TextField
+          <input
             className="input"
             type="text"
             id="name"
             name="name"
             value={name}
-            label="Name"
-            variant="outlined"
             onChange={(e) => setName(e.target.value)}
-            inputProps={{ style: { color: 'white' } }}
-            sx={{
-              '& .MuiOutlinedInput-root': {
-                '& fieldset': {
-                  borderColor: 'white'
-                },
-                '&:hover fieldset': {
-                  borderColor: 'white'
-                },
-                '&.Mui-focused fieldset': {
-                  borderColor: 'white'
-                }
-              }
-            }}
           />
-          <TextField
+          <input
             className="input"
             type="email"
             id="email"
             name="email"
             value={email}
-            variant="outlined"
-            label="Email"
             onChange={(e) => setEmail(e.target.value)}
-            inputProps={{ style: { color: 'white' } }}
-            sx={{
-              '& .MuiOutlinedInput-root': {
-                '& fieldset': {
-                  borderColor: 'white'
-                },
-                '&:hover fieldset': {
-                  borderColor: 'white'
-                },
-                '&.Mui-focused fieldset': {
-                  borderColor: 'white'
-                }
-              }
-            }}
           />
-          <TextField
+          <input
             className="input"
             id="message"
             name="message"
-            label="Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            inputProps={{ style: { color: 'white' } }}
-            sx={{
-              '& .MuiOutlinedInput-root': {
-                '& fieldset': {
-                  borderColor: 'white'
-                },
-                '&:hover fieldset': {
-                  borderColor: 'white'
-                },
-                '&.Mui-focused fieldset': {
-                  borderColor: 'white'
-                }
-              }
-            }}
           />
 
           {email && name && message ? (
-            <Button className="button" variant="contained" type="submit">
+            <button className="button" type="submit">
               Submit
-            </Button>
+            </button>
           ) : (
-            <Button
+            <button
               className="button-disabled"
               type="submit"
-              variant="contained"
               disabled={disable}
             >
               Submit
-            </Button>
+            </button>
           )}
           <h1 className="text-center">
             *Please fill out all required information before submitting
