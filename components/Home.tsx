@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typing } from '@/components/Typing';
+import { TypingComponent } from './Typing';
 
 export const Home = () => {
   return (
@@ -9,7 +9,10 @@ export const Home = () => {
           <div className="card font-mono flex-col flex justify-between text-2xl">
             <div className="text">
               <h1>Welcome to my portfolio site!</h1>
-              <Typing className="text-2xl" text="Feel free to reach me =))" />
+              <TypingComponent />
+            </div>
+            <div className="info flex justify-end text-lg">
+              <button className="button">Let&#39;s Connect</button>
             </div>
           </div>
         </div>
