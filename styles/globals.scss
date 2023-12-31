@@ -1,15 +1,23 @@
 @use './mixin.scss' as *;
 @use './section/' as *;
 @use './scrollbar.scss' as *;
+@use './components' as *;
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Montserrat:wght@300&family=Open+Sans:ital,wght@1,300&family=Oswald:wght@600&family=Poppins:wght@300&family=Roboto&display=swap');
 
 @for $index from 1 through 6 {
   h#{$index} {
     margin: 0;
     line-height: 1.6;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
 }
 body,
@@ -54,30 +62,3 @@ html {
   margin-top: 10em;
   height: 5vh;
 }
-/* card in home section */
-// .card {
-//   width: 25em;
-//   height: 12em;
-//   padding: 2em;
-//   margin-bottom: 5em;
-//   background: rgba(255, 255, 255, 0);
-//   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-//   backdrop-filter: blur(12px);
-//   -webkit-backdrop-filter: blur(12px);
-//   border-radius: 10px;
-//   border: 1px solid rgba(255, 255, 255, 0.18);
-//   .text {
-//     h1 {
-//       color: #5bc1f0;
-//       background-image: -webkit-linear-gradient(
-//         45deg,
-//         #5bc1f0 32%,
-//         #44eb97 57%
-//       );
-//       background-clip: text;
-//       -webkit-background-clip: text;
-
-//       -webkit-text-fill-color: transparent;
-//     }
-//   }
-// }
