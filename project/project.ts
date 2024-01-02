@@ -1,6 +1,6 @@
 import coversy from './coversy.gif';
-import caravelle from './caravelle.gif';
-import cakestore from './cakestore.gif';
+import nail from './nail-salon-min.jpeg';
+import booking from './booking-system-min.jpeg';
 
 export const projects = [
   {
@@ -8,21 +8,20 @@ export const projects = [
     title: 'Coversy',
     repo: 'https://github.com/TieuVanHien/coversy',
     img: coversy,
-    techstack: 'React, Redux, SCSS, Figma, Node.js, AWS3, MongoDB, Responsive'
+    techstack: 'React, Redux, SCSS, Figma, Node.js, AWS3, MongoDB'
   },
   {
     _id: '2',
-    title: 'Caravelle',
-    repo: 'https://github.com/TieuVanHien/Caravelle',
-    img: caravelle,
-    techstack: 'React, SCSS, Figma, NodeMailer, Responsive'
+    title: 'Queensland Nails & Spa',
+    repo: 'https://github.com/TieuVanHien/nail-website',
+    img: nail,
+    techstack: 'React, SCSS, Figma, Sendgrid'
   },
   {
     _id: '3',
-    title: 'Cake Store',
-    repo: 'https://github.com/TieuVanHien/cake-store',
-    img: cakestore,
-    techstack:
-      'Next.js, Stripe, Babel, Sanity CMS, Figma, SCSS, Tailwindcss, Docker'
+    title: 'Booking System',
+    repo: 'https://github.com/TieuVanHien/booking-system',
+    img: booking,
+    techstack: 'Next.js, Django, Typescript, Figma, SCSS, Tailwindcss'
   }
 ];
