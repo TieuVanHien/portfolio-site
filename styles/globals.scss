@@ -19,6 +19,15 @@
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
   }
+  h1 {
+    font-weight: 900;
+    font-size: 2rem;
+    color: #5bc1f0;
+    background-image: -webkit-linear-gradient(45deg, #5bc1f0 32%, #44eb97 57%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 body,
 html {
@@ -28,6 +37,9 @@ html {
     'Liberation Mono', 'Courier New', monospace;
   color: white;
   scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .wrapper {
   height: 100%;

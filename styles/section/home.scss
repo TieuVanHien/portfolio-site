@@ -17,21 +17,6 @@
       -webkit-backdrop-filter: blur(12px);
       border-radius: 10px;
       border: 1px solid rgba(255, 255, 255, 0.18);
-      .text {
-        h1 {
-          font-weight: 900;
-          font-size: 2rem;
-          color: #5bc1f0;
-          background-image: -webkit-linear-gradient(
-            45deg,
-            #5bc1f0 32%,
-            #44eb97 57%
-          );
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      }
     }
   }
   .left {
