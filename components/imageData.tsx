@@ -5,33 +5,33 @@ export const Data = [
     className: 'img'
   },
   {
-    src: 'react-logo-programming-2-svgrepo-com.svg',
+    src: 'react-svgrepo-com.svg',
     alt: 'React',
     className: 'img'
   },
   {
-    src: 'typescript-svgrepo-com.svg',
+    src: 'typescript-official-svgrepo-com.svg',
     alt: 'TypeScript',
     className: 'img'
   },
   {
-    src: 'javascript-fill-svgrepo-com.svg',
+    src: 'javascript-svgrepo-com.svg',
     alt: 'JavaScript',
     className: 'img'
   },
   {
-    src: 'bootstrap-fill-svgrepo-com.svg',
+    src: 'bootstrap-svgrepo-com.svg',
     alt: 'Bootstrap',
     className: 'img'
   },
   {
-    src: 'bootstrap-fill-svgrepo-com.svg',
+    src: 'scss2-svgrepo-com.svg',
     alt: 'SCSS',
     className: 'img'
   },
   {
-    src: 'tailwindcss-svgrepo-com.svg',
-    alt: 'TailwindCss',
+    src: 'tailwindcss-icon-svgrepo-com.svg',
+    alt: 'Tailwindcss',
     className: 'img'
   },
   {
@@ -77,6 +77,16 @@ export const Data = [
   {
     src: 'sanity-svgrepo-com.svg',
     alt: 'Sanity',
+    className: 'img'
+  },
+  {
+    src: 'express-svgrepo-com.svg',
+    alt: 'Express',
+    className: 'img'
+  },
+  {
+    src: 'material-ui-svgrepo-com.svg',
+    alt: 'Material-UI',
     className: 'img'
   }
 ];
