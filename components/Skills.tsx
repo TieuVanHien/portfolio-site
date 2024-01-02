@@ -1,25 +1,27 @@
 import React from 'react';
 import Image from 'next/image';
 import { Data } from './imageData';
-import { Grid } from './GridStyle';
 
 export const Skills = () => {
   return (
-    <div id="skills" className="container flex-col justify-evenly items-start">
-      <h1>Some Of My Favourite Tech Stacks </h1>
-      <div className="skills flex justify-center items-center">
-        <Grid columns={7} rows={2} columnGap={20} rowGap={20}>
-          {Data.map((skill, index) => (
+    <div id="skills" className="skills flex-col justify-start items-center">
+      <div className="heading flex justify-start items-center">
+        <h1>Favourite Tech Stacks </h1>
+        <div className="line ml-4"></div>
+      </div>
+      <div className="tech-container flex justify-center items-center">
+        {Data.map((skill, index) => (
+          <div key={index} className="tech-stack">
             <Image
-              key={index}
-              src={skill.src}
+              src={require(`../assets/${skill.src}`).default}
               alt={skill.alt}
               className={skill.className}
-              width={1}
-              height={1}
+              width={40}
+              height={40}
             />
-          ))}
-        </Grid>
+            <h2>{skill.alt}</h2>
+          </div>
+        ))}
       </div>
     </div>
   );

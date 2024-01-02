@@ -1,72 +1,82 @@
 export const Data = [
   {
-    src: 'https://techstack01.s3.amazonaws.com/skill/nextjs.svg',
+    src: 'next-dot-js-svgrepo-com.svg',
     alt: 'Next.js',
-    className: 'img1'
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.amazonaws.com/skill/react.svg',
+    src: 'react-logo-programming-2-svgrepo-com.svg',
     alt: 'React',
-    className: 'img2'
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.amazonaws.com/skill/typescript.svg',
+    src: 'typescript-svgrepo-com.svg',
     alt: 'TypeScript',
-    className: 'img3'
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.amazonaws.com/skill/js.svg',
+    src: 'javascript-fill-svgrepo-com.svg',
     alt: 'JavaScript',
-    className: 'img4'
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.amazonaws.com/skill/bootstrap.svg',
+    src: 'bootstrap-fill-svgrepo-com.svg',
     alt: 'Bootstrap',
-    className: 'img5'
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.amazonaws.com/skill/scss.svg',
+    src: 'bootstrap-fill-svgrepo-com.svg',
     alt: 'SCSS',
-    className: 'img6'
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.amazonaws.com/skill/tailwind.svg',
+    src: 'tailwindcss-svgrepo-com.svg',
     alt: 'TailwindCss',
-    className: 'img7'
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.amazonaws.com/skill/git.svg',
+    src: 'git-svgrepo-com.svg',
     alt: 'Git',
-    className: 'img8'
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.amazonaws.com/skill/github.svg',
+    src: 'github-142-svgrepo-com.svg',
     alt: 'GitHub',
-    className: 'img9'
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.us-west-2.amazonaws.com/skill/aws.svg',
+    src: 'aws-svgrepo-com.svg',
     alt: 'AWS',
-    className: 'img10'
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.us-west-2.amazonaws.com/skill/docker.svg',
+    src: 'docker-svgrepo-com.svg',
     alt: 'Docker',
-    className: 'img11'
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.us-west-2.amazonaws.com/skill/nodejs.svg',
+    src: 'node-js-svgrepo-com.svg',
     alt: 'Node.js',
-    className: 'img12'
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.amazonaws.com/skill/sql.svg',
-    alt: 'SQL',
-    className: 'img13'
+    src: 'python-svgrepo-com.svg',
+    alt: 'Python',
+    className: 'img'
   },
   {
-    src: 'https://techstack01.s3.amazonaws.com/skill/circleci.svg',
-    alt: 'CircleCI',
-    className: 'img14'
+    src: 'django-icon-svgrepo-com.svg',
+    alt: 'Django',
+    className: 'img'
+  },
+  {
+    src: 'mongodb-svgrepo-com.svg',
+    alt: 'MongoDB',
+    className: 'img'
+  },
+  {
+    src: 'sanity-svgrepo-com.svg',
+    alt: 'Sanity',
+    className: 'img'
   }
 ];
