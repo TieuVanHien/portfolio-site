@@ -88,5 +88,15 @@ export const Data = [
     src: 'material-ui-svgrepo-com.svg',
     alt: 'Material-UI',
     className: 'img'
+  },
+  {
+    src: 'redux-svgrepo-com.svg',
+    alt: 'Redux',
+    className: 'img'
+  },
+  {
+    src: 'figma-svgrepo-com.svg',
+    alt: 'Figma',
+    className: 'img'
   }
 ];

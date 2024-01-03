@@ -1,6 +1,6 @@
 import { Home, Skills, Project, Contact } from '@/components';
 import { Footer } from '@/components/Footer';
-import { projects } from '@/project/project';
+import projects from '@/project/project';
 
 export default function App() {
   return (
