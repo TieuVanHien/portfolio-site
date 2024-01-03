@@ -14,7 +14,7 @@ import NextJSIcon from '@/assets/next-dot-js-svgrepo-com.svg';
 import DjangoIcon from '@/assets/django-icon-svgrepo-com.svg';
 import TailwindIcon from '@/assets/tailwindcss-icon-svgrepo-com.svg';
 
-import { Technology, Project } from '@/interface/interface';
+import { Project } from '@/interface/interface';
 
 const projects: Project[] = [
   {
@@ -22,6 +22,8 @@ const projects: Project[] = [
     title: 'Coversy',
     repo: 'https://github.com/TieuVanHien/coversy',
     img: coversy,
+    live: '',
+    desc: 'Coversy stands as a full-stack application, providing a one-stop solution for businesses focused on instructor management.',
     techstack: [
       { name: 'React', src: ReactIcon },
       { name: 'Redux', src: ReduxIcon },
@@ -37,6 +39,8 @@ const projects: Project[] = [
     title: 'Queensland Nails & Spa',
     repo: 'https://github.com/TieuVanHien/nail-website',
     img: nail,
+    live: 'https://www.queenslandnail.ca/',
+    desc: 'Queensland Nails & Spa website: Where beauty meets relaxation, offering a seamless blend of nail services and spa treatments in an inviting online space.',
     techstack: [
       { name: 'React', src: ReactIcon },
       { name: 'SCSS', src: ScssIcon },
@@ -50,6 +54,8 @@ const projects: Project[] = [
     title: 'Booking System',
     repo: 'https://github.com/TieuVanHien/booking-system',
     img: booking,
+    live: '',
+    desc: 'A full-stack application that provides a cutting-edge Booking System, revolutionizing how businesses manage reservations',
     techstack: [
       { name: 'Next.js', src: NextJSIcon },
       { name: 'Django', src: DjangoIcon },

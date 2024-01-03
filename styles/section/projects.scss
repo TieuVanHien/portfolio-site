@@ -1,67 +1,24 @@
 .projects {
   width: 100%;
   height: auto;
+  max-width: 90%;
   flex-direction: column;
   .frame {
     width: 100%;
-    max-width: 80%;
-    img {
-      width: 50%;
-      height: 18em;
+    max-width: 95%;
+    .image {
+      width: 55%;
+      height: 23em;
+      border-radius: 0.5rem;
     }
     .details {
       width: 45%;
-      height: 15em;
+      height: 18rem;
       padding: 2em;
       margin-left: 3em;
       border-radius: 10px;
-      a {
-        text-align: center;
-        padding: 5px;
-        text-transform: capitalize;
-        position: relative;
-        transition: 0.5s;
-      }
-      a::before,
-      a::after {
-        content: '';
-        position: absolute;
-        transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
-      }
-      a::before {
-        left: 0;
-        z-index: -1;
-      }
-      a::after {
-        right: 0;
-        z-index: -2;
-      }
-      a:hover {
-        color: black;
-      }
-      a:hover::before,
-      a:hover::after {
+      .project-heading {
         width: 100%;
-        height: 100%;
-        border-radius: 0;
-        background-color: white;
-      }
-      a:hover::before {
-        top: 0;
-      }
-      a:hover::after {
-        right: -0.4em;
-        filter: brightness(0.8);
-      }
-      h1 {
-        font-size: x-large;
-      }
-      &:hover {
-        margin-bottom: 0.5em;
-        -webkit-box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-        -moz-box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-        box-shadow: 0px 0px 13px -1px rgba(82, 77, 82, 1);
-        transition: 0.3s ease-out;
       }
     }
   }

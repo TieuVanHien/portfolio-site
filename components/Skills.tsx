@@ -4,7 +4,10 @@ import { Data } from './imageData';
 
 export const Skills = () => {
   return (
-    <div id="skills" className="skills flex-col justify-start items-center">
+    <section
+      id="skills"
+      className="skills flex flex-col justify-start items-center"
+    >
       <div className="heading mb-8 flex justify-start items-center">
         <h1>Favourite Tech Stacks </h1>
         <div className="line ml-4"></div>
@@ -34,6 +37,6 @@ export const Skills = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
