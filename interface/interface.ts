@@ -1,5 +1,4 @@
 import { StaticImageData } from 'next/image';
-import { ReactNode } from 'react';
 
 export interface Technology {
   name: string;
@@ -11,5 +10,7 @@ export interface Project {
   title: string;
   repo: string;
   img: StaticImageData;
+  live: string;
+  desc: string;
   techstack: Technology[];
 }
