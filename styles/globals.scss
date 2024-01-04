@@ -27,6 +27,8 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0.125rem 0.125rem 1.25rem rgba(255, 255, 255, 0.5);
+    opacity: 70%;
   }
 }
 body,
