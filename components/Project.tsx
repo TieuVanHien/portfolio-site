@@ -22,12 +22,12 @@ interface ProjectProps {
 export const Project = ({ projects }: ProjectProps) => {
   return (
     <section id="projects" className="projects flex justify-evenly">
+      <div className="heading flex justify-start items-center">
+        <h1>My Projects</h1>
+        <div className="line"></div>
+      </div>
       {projects.map((project) => (
         <>
-          <div className="heading flex justify-start items-center">
-            <h1>My Projects</h1>
-            <div className="line"></div>
-          </div>
           <div
             className="frame flex justify-between items-center m-16"
             key={project._id}
