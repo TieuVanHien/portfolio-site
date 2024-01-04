@@ -6,7 +6,8 @@ export const TypingComponent = () => {
     const options = {
       strings: [
         'Hello, World!',
-        'I love building things for web app.',
+        'I love building things for web apps.',
+        'I love learning new tech stacks.',
         'Coding with love.',
         'Feel free to reach me!'
       ],
@@ -21,5 +22,5 @@ export const TypingComponent = () => {
     };
   }, []);
 
-  return <span className="typing-element"></span>;
+  return <span className="typing-element text-base"></span>;
 };
