@@ -2,17 +2,23 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PermPhoneMsgOutlinedIcon from '@mui/icons-material/PermPhoneMsgOutlined';
+import EmailIcon from '@mui/icons-material/Email';
+import TextField from '@mui/material/TextField';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [subject, setSubject] = useState('');
   const [disable, setDisable] = useState(true);
   const phone = '+1 (587)-917-5931';
   const emailAdr = 'tieuvanhien01@gmail.com';
 
   const handleValid = () => {
-    if (name && email && message) {
+    if (name && email && message && subject) {
       setDisable(false);
     } else {
       setDisable(true);
@@ -28,11 +34,12 @@ export const Contact = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, email, message })
+        body: JSON.stringify({ name, email, subject, message })
       });
       if (res.ok) {
         setName('');
         setEmail('');
+        setSubject('');
         setMessage('');
         setDisable(true);
         toast.success('Thanks for submitting the form!');
@@ -43,111 +50,115 @@ export const Contact = () => {
   };
 
   return (
-    <div
-      id="contact"
-      className="container contact flex flex-col justify-evenly items-center"
-    >
-      <div className="contact-med flex justify-center items-center">
-        <div className="info flex flex-col justify-start">
+    <div id="contact" className="container contact flex items-center">
+      <div className="contact-container flex justify-center  pt-16">
+        <div className="info flex flex-col justify-start ">
           <div className="info-heading">
-            <h1 className="text-6xl mb-4">Let&apos;s Chat</h1>
-            <h2 className="text-lg">
-              Fill in the form to send me a message. Otherwise, feel free to
-              reach me at my email address.
+            <div className="heading flex items-center">
+              <h1 className="text-6xl mb-4">Let&apos;s Chat</h1>
+              <div className="line"></div>
+            </div>
+
+            <h2 className="text-lg mt-6">
+              I&apos;m open for new projects and opportunities. Whether you
+              represent a company seeking to hire or you simply want to engage
+              in a conversation, I am eager to connect with you.
             </h2>
           </div>
-          <div className="social-info">
+          <div className="social-info mt-14 flex flex-col justify-center items-start">
             <Link
               href={`tel:${phone}`}
-              className="phone icon flex justify-start items-center mb-2"
+              className="flex justify-center items-center mb-2"
             >
-              <div className="phone-icon">
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  data-icon="phone"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
-                  ></path>
-                </svg>
+              <div className="icon">
+                <PermPhoneMsgOutlinedIcon />
               </div>
-              <p className="text-lg ml-6">{phone}</p>
+              <p className="text-lg ml-4">{phone}</p>
             </Link>
             <Link
               href={`mailto:${emailAdr}`}
-              className="email icon flex justify-start items-center"
+              className="flex justify-center items-center"
             >
-              <div className="email-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                  <polyline points="8 10 12 14 16 10" />
-                </svg>
+              <div className="icon">
+                <EmailIcon />
               </div>
-              <p className="text-lg ml-6"> {emailAdr}</p>
+              <p className="text-lg ml-4"> {emailAdr}</p>
             </Link>
+            <div className="flex mt-4">
+              <Link
+                className="icon flex justify-center items-center mr-2"
+                href="https://www.linkedin.com/in/van-hien-tieu-4532041b7/"
+                target="_blank"
+              >
+                <LinkedInIcon fontSize="large" />
+              </Link>
+              <Link
+                className="icon flex justify-center items-center"
+                href="https://github.com/TieuVanHien"
+                target="_blank"
+              >
+                <GitHubIcon fontSize="large" />
+              </Link>
+            </div>
           </div>
         </div>
-        <form
-          className="form flex flex-col justify-evenly items-center"
-          onSubmit={handleSubmit}
-        >
-          <input
-            className="input"
-            type="text"
-            id="name"
-            name="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            className="input"
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            className="input"
-            id="message"
-            name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
+        <div className="form-container flex justify-start">
+          <form
+            className="form flex flex-col justify-evenly items-center"
+            onSubmit={handleSubmit}
+          >
+            <TextField
+              className="input"
+              label="Name"
+              variant="standard"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <TextField
+              className="input"
+              label="Subject"
+              variant="standard"
+              multiline
+              required
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+            />
+            <TextField
+              className="input"
+              label="Email"
+              variant="standard"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <TextField
+              className="input"
+              label="Message"
+              variant="standard"
+              rows={4}
+              maxRows={Infinity}
+              required
+              multiline
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
 
-          {email && name && message ? (
-            <button className="button" type="submit">
-              Submit
-            </button>
-          ) : (
-            <button
-              className="button-disabled"
-              type="submit"
-              disabled={disable}
-            >
-              Submit
-            </button>
-          )}
-          <h1 className="text-center">
-            *Please fill out all required information before submitting
-          </h1>
-        </form>
+            {email && name && message ? (
+              <button className="button" type="submit">
+                Submit
+              </button>
+            ) : (
+              <button
+                className="button-disabled"
+                type="submit"
+                disabled={disable}
+              >
+                Submit
+              </button>
+            )}
+          </form>
+        </div>
       </div>
     </div>
   );
