@@ -16,7 +16,7 @@
     "@emotion/styled": "^11.11.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@mui/icons-material": "^5.15.2",
-    "@mui/material": "^5.15.2",
+    "@mui/material": "^5.15.3",
     "@sendgrid/mail": "^8.1.0",
     "autoprefixer": "10.4.16",
     "aws-sdk": "^2.1528.0",
