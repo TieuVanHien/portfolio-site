@@ -1,10 +1,11 @@
 import React from 'react';
 import { TypingComponent } from './Typing';
+import { RoboModel } from './Scene';
 
 export const Home = () => {
   return (
     <section id="home" className="home">
-      <div className="container">
+      <div className="container flex">
         <div className="right flex justify-center items-center ">
           <div className="card font-mono flex-col flex justify-between text-2xl">
             <div className="text">
@@ -16,7 +17,9 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="left"></div>
+        <div className="left pl-24">
+          <RoboModel />
+        </div>
       </div>
     </section>
   );
