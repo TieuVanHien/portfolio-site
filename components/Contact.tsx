@@ -136,8 +136,8 @@ export const Contact = () => {
               className="input"
               label="Message"
               variant="standard"
-              rows={4}
-              maxRows={Infinity}
+              rows={6}
+              maxRows={16}
               required
               multiline
               value={message}
