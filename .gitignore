@@ -11,9 +11,6 @@
 # next.js
 /.next/
 /out/
-
-/public/models/
-
 # production
 /build
 
