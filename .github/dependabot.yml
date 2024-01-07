@@ -14,29 +14,3 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
-
-on_schedule:
-  - name: Check for conflicts and auto-merge Dependabot updates
-    workflow:
-      jobs:
-        - name: Check and Merge
-          runs-on: ubuntu-latest
-          steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
-
-            - name: Check for conflicts
-              run: |
-                git fetch origin refs/pull/${{ dependabot_pr_number }}/merge
-                git checkout FETCH_HEAD
-                git merge-base --is-ancestor HEAD origin/main || echo "Conflicts detected"
-
-            - name: Merge pull request
-              if: success()
-              run: |
-                if [ -z "$(cat conflicts)" ]; then
-                  git push origin HEAD:refs/heads/main
-                  gh pr merge ${{ dependabot_pr_number }} --merge --squash
-                else
-                  echo "Conflicts detected. Manual intervention required."
-                fi

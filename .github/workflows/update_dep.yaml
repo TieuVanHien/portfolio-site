@@ -1,0 +1,28 @@
+name: Merge Dependabot Updates
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  merge-dependabot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check for conflicts
+        run: |
+          git fetch origin refs/pull/${{ dependabot_pr_number }}/merge
+          git checkout FETCH_HEAD
+          git merge-base --is-ancestor HEAD origin/main || echo "Conflicts detected" >> conflicts
+
+      - name: Merge pull request
+        if: always() && success()
+        run: |
+          if [ ! -f conflicts ]; then
+            gh pr merge ${{ dependabot_pr_number }} --merge --squash
+          else
+            echo "Conflicts detected. Manual intervention required."
+          fi
