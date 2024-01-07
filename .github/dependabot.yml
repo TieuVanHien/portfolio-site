@@ -17,3 +17,25 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
+on:
+  pull_request:
+    types:
+      - synchronize
+
+jobs:
+  merge-dependabot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Merge pull request
+        run: |
+          git fetch origin pull/${{ github.event.pull_request.number }}/merge:pr_merge
+          git checkout pr_merge
+          git merge --no-ff origin/main -m "Auto-merge Dependabot changes" || true
+          git push origin HEAD:refs/heads/main
+
+          git checkout main
+          git branch -D pr_merge
