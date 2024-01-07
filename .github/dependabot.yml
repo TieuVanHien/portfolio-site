@@ -1,22 +1,20 @@
 version: 2
 updates:
-  # Maintain dependencies for GitHub Actions
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
       interval: 'daily'
 
-  # Maintain dependencies for npm
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
       interval: 'daily'
 
-  # Maintain dependencies for Composer
   - package-ecosystem: 'composer'
     directory: '/'
     schedule:
       interval: 'daily'
+
 on:
   pull_request:
     types:
@@ -30,12 +28,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Set up GitHub CLI
+        uses: actions/setup-gh@v0.5.0
+
+      - name: Check for conflicts
+        id: check_conflicts
+        run: |
+          git fetch origin pull/${{ github.event.pull_request.number }}/head:pr_head
+          git checkout pr_head
+          git merge-base --is-ancestor HEAD origin/main || echo "Conflicts detected"
+
       - name: Merge pull request
         run: |
-          git fetch origin pull/${{ github.event.pull_request.number }}/merge:pr_merge
-          git checkout pr_merge
-          git merge --no-ff origin/main -m "Auto-merge Dependabot changes" || true
-          git push origin HEAD:refs/heads/main
-
-          git checkout main
-          git branch -D pr_merge
+          if [ -z "$(cat ${{ github.workspace }}/conflicts)" ]; then
+            gh pr merge ${{ github.event.pull_request.number }} --merge --squash
+          else
+            echo "Conflicts detected. Manual intervention required."
+          fi
