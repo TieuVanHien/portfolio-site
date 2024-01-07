@@ -15,33 +15,28 @@ updates:
     schedule:
       interval: 'daily'
 
-on:
-  pull_request:
-    types:
-      - synchronize
+on_schedule:
+  - name: Check for conflicts and auto-merge Dependabot updates
+    workflow:
+      jobs:
+        - name: Check and Merge
+          runs-on: ubuntu-latest
+          steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
 
-jobs:
-  merge-dependabot:
-    runs-on: ubuntu-latest
+            - name: Check for conflicts
+              run: |
+                git fetch origin refs/pull/${{ dependabot_pr_number }}/merge
+                git checkout FETCH_HEAD
+                git merge-base --is-ancestor HEAD origin/main || echo "Conflicts detected"
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up GitHub CLI
-        uses: actions/setup-gh@v0.5.0
-
-      - name: Check for conflicts
-        id: check_conflicts
-        run: |
-          git fetch origin pull/${{ github.event.pull_request.number }}/head:pr_head
-          git checkout pr_head
-          git merge-base --is-ancestor HEAD origin/main || echo "Conflicts detected"
-
-      - name: Merge pull request
-        run: |
-          if [ -z "$(cat ${{ github.workspace }}/conflicts)" ]; then
-            gh pr merge ${{ github.event.pull_request.number }} --merge --squash
-          else
-            echo "Conflicts detected. Manual intervention required."
-          fi
+            - name: Merge pull request
+              if: success()
+              run: |
+                if [ -z "$(cat conflicts)" ]; then
+                  git push origin HEAD:refs/heads/main
+                  gh pr merge ${{ dependabot_pr_number }} --merge --squash
+                else
+                  echo "Conflicts detected. Manual intervention required."
+                fi
