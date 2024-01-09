@@ -30,7 +30,7 @@ export const Nav: React.FC<NavProps> = () => {
 
   return (
     <nav
-      className={`nav flex justify-between align-center ${
+      className={`nav flex justify-between h-20 items-center lg:flex lg:justify-between lg:items-center ${
         isScrolled ? 'shrink' : ''
       }`}
     >
@@ -38,12 +38,12 @@ export const Nav: React.FC<NavProps> = () => {
         <Image
           src="https://techstack01.s3.us-west-2.amazonaws.com/logo.svg"
           alt="logo"
-          className="w-40"
+          className="lg:w-20 lg:h-20 lg:ml-6"
           width={100}
           height={50}
         />
       </div>
-      <div className="contact-icon flex justify-center items-center mr-8">
+      <div className="contact-icon lg:flex lg:justify-center lg:items-center lg:mr-8">
         <Link
           className="icon flex justify-center items-center"
           href="https://www.linkedin.com/in/van-hien-tieu-4532041b7/"
