@@ -1,11 +1,14 @@
 ::-webkit-scrollbar {
   width: 0.5em;
   height: auto;
+  display: none;
 }
 ::-webkit-scrollbar-track {
   background-color: black;
+  display: none;
 }
 ::-webkit-scrollbar-thumb {
   background-color: white;
+  display: none;
   border-radius: 5px;
 }
