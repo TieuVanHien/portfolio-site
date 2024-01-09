@@ -1,6 +1,5 @@
 .nav {
   position: fixed;
-  height: 16%;
   top: 0;
   left: 0;
   width: 100%;
@@ -8,7 +7,9 @@
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  transition:
+    height 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
   &.shrink {
     height: 12%;
     padding: 10px 0;

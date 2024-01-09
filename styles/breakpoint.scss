@@ -1,4 +1,4 @@
-$mobile: 360px;
+$mobile: 420px;
 $tablet: 768px;
 $laptop: 1024px;
 $desktop: 1440px;
@@ -9,7 +9,6 @@ $breakpoints: (
   laptop: $laptop,
   desktop: $desktop
 );
-
 :export {
   mobile: $mobile;
   tablet: $tablet;
