@@ -30,7 +30,7 @@ export const Nav: React.FC<NavProps> = () => {
 
   return (
     <nav
-      className={`nav flex justify-between h-20 items-center lg:flex lg:justify-between lg:items-center ${
+      className={`nav flex justify-between w-full h-20 items-center lg:h-24 lg:flex lg:w-full lg:justify-between lg:items-center ${
         isScrolled ? 'shrink' : ''
       }`}
     >
@@ -38,31 +38,31 @@ export const Nav: React.FC<NavProps> = () => {
         <Image
           src="https://techstack01.s3.us-west-2.amazonaws.com/logo.svg"
           alt="logo"
-          className="lg:w-20 lg:h-20 lg:ml-6"
+          className="w-14 h-14 ml-4 lg:w-20 lg:h-20 lg:ml-6"
           width={100}
           height={50}
         />
       </div>
-      <div className="contact-icon lg:flex lg:justify-center lg:items-center lg:mr-8">
+      <div className="contact-icon flex justify-center items-center lg:flex lg:justify-center lg:items-center lg:mr-8">
         <Link
           className="icon flex justify-center items-center"
           href="https://www.linkedin.com/in/van-hien-tieu-4532041b7/"
           target="_blank"
         >
-          <LinkedInIcon fontSize="large" />
+          <LinkedInIcon fontSize="large" className="w-8 h-8" />
         </Link>
         <Link
           className="icon flex justify-center items-center"
           href="https://github.com/TieuVanHien"
           target="_blank"
         >
-          <GitHubIcon fontSize="large" />
+          <GitHubIcon fontSize="large" className="w-8 h-8" />
         </Link>
         <Link
           className="icon flex justify-center items-center"
           href={`mailto:${emailAdr}`}
         >
-          <EmailIcon fontSize="large" />
+          <EmailIcon fontSize="large" className="w-8 h-8" />
         </Link>
       </div>
     </nav>
