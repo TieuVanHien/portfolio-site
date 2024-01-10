@@ -3,6 +3,7 @@ import { Layout } from '@/components';
 import '@/styles/globals.scss';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Head from 'next/head';
 
 interface AppProps {
   Component: React.ComponentType<any>;
@@ -12,14 +13,9 @@ interface AppProps {
 function App({ Component, pageProps }: AppProps) {
   return (
     <Layout>
-      <ToastContainer
-        position="bottom-right"
-        autoClose={3000}
-        hideProgressBar={true}
-        closeOnClick
-        pauseOnHover
-        style={{ fontSize: '16px' }}
-      />
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <Component {...pageProps} />
     </Layout>
   );
