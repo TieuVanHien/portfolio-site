@@ -50,65 +50,68 @@ export const Contact = () => {
   };
 
   return (
-    <div id="contact" className="container contact flex items-center">
-      <div className="contact-container flex justify-center  pt-16">
-        <div className="info flex flex-col justify-start ">
+    <div
+      id="contact"
+      className="contact w-full flex flex-col justify-start h-screen lg:h-screen lg:w-full lg:flex lg:items-center"
+    >
+      <div className="contact-container p-8 flex flex-col w-full h-auto lg:flex-row lg:w-full lg:h-full lg:flex lg:justify-center lg:pt-16">
+        <div className="info w-full h-1/4 lg:p-12 lg:w-1/2 lg:h-full  lg:flex lg:flex-col lg:justify-start ">
           <div className="info-heading">
-            <div className="heading flex items-center">
-              <h1 className="text-6xl mb-4">Let&apos;s Chat</h1>
-              <div className="line"></div>
+            <div className="heading flex justify-start items-center lg:flex lg:items-center">
+              <h1 className="text-4xl lg:text-6xl">Let&apos;s Chat</h1>
+              <div className="line ml-4 w-1/2 lg:w-1/2 lg:ml-4"></div>
             </div>
 
-            <h2 className="text-lg mt-6">
+            <h2 className="mt-8 text-base lg:text-lg lg:mt-6 lg:w-3/4">
               I&apos;m open for new projects and opportunities. Whether you
               represent a company seeking to hire or you simply want to engage
               in a conversation, I am eager to connect with you.
             </h2>
           </div>
-          <div className="social-info mt-14 flex flex-col justify-center items-start">
+          <div className="social-info mt-8 w-full lg:w-full lg:mt-14 lg:flex lg:flex-col lg:justify-center lg:items-start">
             <Link
               href={`tel:${phone}`}
-              className="flex justify-center items-center mb-2"
+              className="flex mb-1 lg:flex lg:justify-center lg:items-center lg:mb-2"
             >
-              <div className="icon">
+              <div className="icon mr-2 lg:w-8 lg:h-8">
                 <PermPhoneMsgOutlinedIcon />
               </div>
-              <p className="text-lg ml-4">{phone}</p>
+              <p className="lg:text-lg lg:ml-4">{phone}</p>
             </Link>
             <Link
               href={`mailto:${emailAdr}`}
-              className="flex justify-center items-center"
+              className="flex mb-2 lg:flex lg:justify-center lg:items-center"
             >
-              <div className="icon">
+              <div className="icon mr-2 lg:w-8 lg:h-8">
                 <EmailIcon />
               </div>
-              <p className="text-lg ml-4"> {emailAdr}</p>
+              <p className="lg:text-lg lg:ml-4"> {emailAdr}</p>
             </Link>
-            <div className="flex mt-4">
+            <div className="lg:flex lg:mt-4">
               <Link
-                className="icon flex justify-center items-center mr-2"
+                className="mr-1 lg:icon lg:flex lg:justify-center lg:items-center lg:mr-2"
                 href="https://www.linkedin.com/in/van-hien-tieu-4532041b7/"
                 target="_blank"
               >
-                <LinkedInIcon fontSize="large" />
+                <LinkedInIcon fontSize="large" className="lg:w-8 lg:h-8" />
               </Link>
               <Link
-                className="icon flex justify-center items-center"
+                className="icon lg:flex lg:justify-center lg:items-center"
                 href="https://github.com/TieuVanHien"
                 target="_blank"
               >
-                <GitHubIcon fontSize="large" />
+                <GitHubIcon fontSize="large" className="lg:w-8 lg:h-8" />
               </Link>
             </div>
           </div>
         </div>
-        <div className="form-container flex justify-start">
+        <div className="form-container mt-8 w-full h-screen lg:m-0 lg:w-1/2 lg:h-full lg:flex lg:justify-start">
           <form
-            className="form flex flex-col justify-evenly items-center"
+            className="form w-full h-full flex flex-col lg:w-full lg:h-full lg:flex lg:flex-col lg:justify-evenly lg:items-center"
             onSubmit={handleSubmit}
           >
             <TextField
-              className="input"
+              className="input mb-4 w-full h-16 lg:mb-2 lg:w-3/4 lg:text-white"
               label="Name"
               variant="standard"
               required
@@ -116,7 +119,7 @@ export const Contact = () => {
               onChange={(e) => setName(e.target.value)}
             />
             <TextField
-              className="input"
+              className="input lg:mb-2 lg:w-3/4 lg:text-white"
               label="Subject"
               variant="standard"
               multiline
@@ -125,7 +128,7 @@ export const Contact = () => {
               onChange={(e) => setSubject(e.target.value)}
             />
             <TextField
-              className="input"
+              className="input lg:mb-2 lg:w-3/4 lg:text-white"
               label="Email"
               variant="standard"
               required
@@ -133,10 +136,10 @@ export const Contact = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
-              className="input"
+              className="input resize-y lg:resize-y lg:mb-2 lg:w-3/4 lg:text-white"
               label="Message"
+              maxRows={50}
               variant="standard"
-              rows={6}
               required
               multiline
               value={message}
@@ -144,12 +147,15 @@ export const Contact = () => {
             />
 
             {email && name && message ? (
-              <button className="button" type="submit">
+              <button
+                className="button w-full lg:w-1/4 lg:h-12 rounded-lg"
+                type="submit"
+              >
                 Submit
               </button>
             ) : (
               <button
-                className="button-disabled"
+                className="button-disabled h-12 w-1/2 mt-16 lg:w-1/4 lg:h-12 rounded-lg"
                 type="submit"
                 disabled={disable}
               >
