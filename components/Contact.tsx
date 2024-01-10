@@ -52,7 +52,7 @@ export const Contact = () => {
   return (
     <div
       id="contact"
-      className="contact w-full flex flex-col justify-start h-screen lg:h-screen lg:w-full lg:flex lg:items-center"
+      className="contact w-full flex flex-col h-90vh justify-start lg:h-90vh lg:w-full lg:flex lg:items-center"
     >
       <div className="contact-container p-8 flex flex-col w-full h-auto lg:flex-row lg:w-full lg:h-full lg:flex lg:justify-center lg:pt-16">
         <div className="info w-full h-1/4 lg:p-12 lg:w-1/2 lg:h-full  lg:flex lg:flex-col lg:justify-start ">
@@ -105,7 +105,7 @@ export const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="form-container mt-8 w-full h-screen lg:m-0 lg:w-1/2 lg:h-full lg:flex lg:justify-start">
+        <div className="form-container mt-8 w-full h-90vh lg:m-0 lg:w-1/2 lg:h-full lg:flex lg:justify-start">
           <form
             className="form w-full h-full flex flex-col lg:w-full lg:h-full lg:flex lg:flex-col lg:justify-evenly lg:items-center"
             onSubmit={handleSubmit}
