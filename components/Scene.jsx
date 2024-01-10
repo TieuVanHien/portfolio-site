@@ -1013,9 +1013,7 @@ export const RoboModel = () => {
       camera={{ position: [8, 6, 11], fov: 22 }}
       style={{
         width: '100%',
-        height: '100%',
-        paddingTop: '3rem',
-        paddingLeft: '5em'
+        height: '100%'
       }}
       className="canvas-container"
     >

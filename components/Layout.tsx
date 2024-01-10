@@ -13,7 +13,7 @@ export const Layout = ({ children }: LayoutProps) => {
         <title>Van Hien Tieu | Software Developer</title>
       </Head>
       <Nav scrollTarget="" />
-      <div className="flex justify-center items-center">{children}</div>
+      {children}
     </div>
   );
 };
