@@ -21,7 +21,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="left w-full h-80 flex p-0 justify-center items-center lg:pt-12 lg:h-full lg:w-3/5 lg:flex lg:justify-center">
+      <div className="left w-full h-80 flex p-0 m-0 justify-center items-center lg:pt-12 lg:h-full lg:w-3/5 lg:flex lg:justify-center">
         <RoboModel />
       </div>
     </section>
