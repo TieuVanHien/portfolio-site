@@ -6,7 +6,12 @@ module.exports = {
     path.join(__dirname, './components/*.{ts,tsx}')
   ],
   theme: {
-    extend: {}
+    extend: {
+      height: {
+        '80vh': '80vh',
+        '90vh': '90vh'
+      }
+    }
   },
   plugins: ['prettier-plugin-tailwindcss']
 };
