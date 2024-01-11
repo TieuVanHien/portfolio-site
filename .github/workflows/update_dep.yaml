@@ -14,7 +14,7 @@ jobs:
 
       - name: Check for conflicts
         run: |
-          git fetch origin refs/pull/${{ dependabot_pr_number }}/merge
+          git fetch origin refs/pull/${{ steps.extract_pr_number.outputs.pr_number }}/merge
           git checkout FETCH_HEAD
           git merge-base --is-ancestor HEAD origin/main || echo "Conflicts detected" >> conflicts
 
@@ -22,7 +22,7 @@ jobs:
         if: always() && success()
         run: |
           if [ ! -f conflicts ]; then
-            gh pr merge ${{ dependabot_pr_number }} --merge --squash
+            gh pr merge ${{ steps.extract_pr_number.outputs.pr_number }} --merge --squash
           else
             echo "Conflicts detected. Manual intervention required."
           fi
