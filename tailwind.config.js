@@ -9,7 +9,10 @@ module.exports = {
     extend: {
       height: {
         '80vh': '80vh',
-        '90vh': '90vh'
+        '90vh': '90vh',
+        '50vh': '50vh',
+        '70vh': '70vh',
+        '60vh': '60vh'
       }
     }
   },
