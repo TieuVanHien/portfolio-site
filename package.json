@@ -26,7 +26,7 @@
     "eslint-config-next": "14.0.4",
     "next": "^14.0.4",
     "pnpm": "^8.14.0",
-    "postcss": "8.4.31",
+    "postcss": "8.4.33",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scroll-parallax": "^3.4.5",
