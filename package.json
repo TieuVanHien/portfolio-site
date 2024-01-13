@@ -21,7 +21,6 @@
     "@react-three/fiber": "^8.15.13",
     "@sendgrid/mail": "^8.1.0",
     "autoprefixer": "10.4.16",
-    "aws-sdk": "^2.1533.0",
     "eslint": "8.53.0",
     "eslint-config-next": "14.0.4",
     "next": "^14.0.4",
