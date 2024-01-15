@@ -110,7 +110,7 @@ export const Contact = () => {
           onSubmit={handleSubmit}
         >
           <TextField
-            className="input mb-8 w-full h-16 lg:mb-2 lg:w-3/4 lg:text-white"
+            className="input mb-8 w-full h-20 lg:mb-2 lg:w-3/4 lg:text-white"
             label="Name"
             variant="standard"
             required
@@ -118,7 +118,7 @@ export const Contact = () => {
             onChange={(e) => setName(e.target.value)}
           />
           <TextField
-            className="input mb-8 lg:mb-2 lg:w-3/4 lg:text-white"
+            className="input mb-8 h-20 lg:mb-2 lg:w-3/4 lg:text-white"
             label="Subject"
             variant="standard"
             multiline
@@ -127,7 +127,7 @@ export const Contact = () => {
             onChange={(e) => setSubject(e.target.value)}
           />
           <TextField
-            className="input mb-8 lg:mb-2 lg:w-3/4 lg:text-white"
+            className="input mb-8 h-20 lg:mb-2 lg:w-3/4 lg:text-white"
             label="Email"
             variant="standard"
             required
