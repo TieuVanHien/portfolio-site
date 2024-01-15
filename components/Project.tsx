@@ -27,7 +27,7 @@ export const Project = ({ projects }: ProjectProps) => {
     >
       <div className="heading mb-8 flex justify-start items-center lg:h-1/10 lg:w-full lg:mb-8 lg:flex lg:justify-start lg:items-center">
         <h1 className="text-2xl lg:text-4xl">My Projects</h1>
-        <div className="line ml-4 w-3/5 lg:w-1/4 lg:ml-4"></div>
+        <div className="line ml-4 w-2/5 lg:w-1/4 lg:ml-4"></div>
       </div>
       {projects.map((project) => (
         <div

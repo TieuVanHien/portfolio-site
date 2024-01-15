@@ -58,7 +58,7 @@ export const Contact = () => {
         <div className="info-heading">
           <div className="heading flex justify-start items-center lg:flex lg:items-center">
             <h1 className="text-4xl lg:text-6xl">Let&apos;s Chat</h1>
-            <div className="line ml-4 w-1/2 lg:w-1/2 lg:ml-4"></div>
+            <div className="line ml-4 w-1/3 lg:w-1/2 lg:ml-4"></div>
           </div>
 
           <h2 className="mt-8 text-base lg:text-lg lg:mt-6 lg:w-3/4">
@@ -118,7 +118,7 @@ export const Contact = () => {
             onChange={(e) => setName(e.target.value)}
           />
           <TextField
-            className="input lg:mb-2 lg:w-3/4 lg:text-white"
+            className="input mb-6 lg:mb-2 lg:w-3/4 lg:text-white"
             label="Subject"
             variant="standard"
             multiline
@@ -127,7 +127,7 @@ export const Contact = () => {
             onChange={(e) => setSubject(e.target.value)}
           />
           <TextField
-            className="input lg:mb-2 lg:w-3/4 lg:text-white"
+            className="input mb-6 lg:mb-2 lg:w-3/4 lg:text-white"
             label="Email"
             variant="standard"
             required
@@ -135,7 +135,7 @@ export const Contact = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <TextField
-            className="input resize-y lg:resize-y lg:mb-2 lg:w-3/4 lg:text-white"
+            className="input mb-6 resize-y lg:resize-y lg:mb-2 lg:w-3/4 lg:text-white"
             label="Message"
             maxRows={50}
             variant="standard"
