@@ -6,3 +6,4 @@ export { Project } from './Project';
 export { TypingComponent } from './Typing';
 export { Contact } from './Contact';
 export { RoboModel } from './Scene';
+export { About } from './About';
