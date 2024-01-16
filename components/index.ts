@@ -7,3 +7,4 @@ export { TypingComponent } from './Typing';
 export { Contact } from './Contact';
 export { RoboModel } from './Scene';
 export { About } from './About';
+export { Experience } from './Experience';

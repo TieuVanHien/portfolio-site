@@ -33,16 +33,16 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="about flex flex-col justify-evenly w-full h-auto mt-16 lg:w-full lg:h-auto lg:flex lg:flex-col lg:items-center lg:justify-evenly"
+      className="about flex flex-col justify-evenly w-[85%] h-auto mt-16 lg:w-full lg:h-screen lg:flex lg:flex-col lg:items-center lg:justify-evenly"
     >
-      <div className="heading mb-8 flex justify-start items-center lg:h-1/10 lg:w-full lg:mb-8 lg:flex lg:justify-start lg:items-center">
+      <div className="heading mb-12 flex justify-start items-center lg:h-1/10 lg:w-full lg:mb-8 lg:flex lg:justify-start lg:items-center">
         <h1 className="text-2xl lg:text-4xl">About Me</h1>
         <div className="line ml-4 w-2/5 lg:w-1/4 lg:ml-4"></div>
       </div>
-      <div className="container lg:flex lg:flex-row">
-        <div className="card-container lg:h-screen  lg:w-2/5">
-          <div className="card lg:rounded-md lg:p-7 lg:border-solid lg:border-2 lg:border-slate-500 lg:w-4/5 lg:h-3/4">
-            <div className="image relative lg:flex lg:flex-col lg:justify-evenly lg:items-center lg:h-4/5 lg:w-full">
+      <div className="container w-full lg:flex lg:h-85vh lg:flex-row">
+        <div className="card-container w-full h-[90vh] flex justify-center items-center lg:h-[90%]  lg:w-2/5">
+          <div className="card rounded-md w-full h-full p-4 flex flex-col justify-center items-center lg:p-7 border-solid border-2 border-slate-500 lg:w-4/5 lg:h-full">
+            <div className="image flex flex-col justify-center items-center relative lg:flex lg:flex-col lg:justify-evenly lg:items-center lg:h-4/5 lg:w-full">
               <Image
                 className="lg:w-4/5 rounded-md lg:h-4/5 z-20"
                 src={'/profile.jpg'}
@@ -50,25 +50,25 @@ export const About = () => {
                 height={300}
                 alt="profile card img"
               />
-              <h2 className="lg:text-lg lg:mt-2">Van Hien Tieu</h2>
+              <h2 className="mt-4 text-xl lg:text-lg lg:mt-2">Van Hien Tieu</h2>
               <h3 className="lg:text-sm text-slate-500 ">
                 Software Developer | Web Developer
               </h3>
-              <div className="blob1 lg:absolute z-10"></div>
-              <div className="blob2 lg:absolute z-10"></div>
-              <div className="blob3 lg:absolute z-10"></div>
+              <div className="blob1 hidden lg:block lg:absolute z-10"></div>
+              <div className="blob2 hidden lg:block  lg:absolute z-10"></div>
+              <div className="blob3 hidden lg:block lg:absolute z-10"></div>
             </div>
-            <div className="profile lg:mt-10 lg:w-full lg:justify-evenly lg:flex flex-row">
+            <div className="profile w-[80%] mt-6 lg:mt-10 lg:w-full lg:justify-evenly lg:flex flex-row">
               <div className="button flex justify-center items-center lg:w-2/5 lg:h-10 rounded-lg">
                 <DataObjectIcon />
-                <button className="w-3/5" onClick={handleDownload}>
+                <button className="ml-2 lg:w-3/5" onClick={handleDownload}>
                   Resume
                 </button>
               </div>
-              <div className="button-second z-20 flex justify-center items-center lg:pl-2 lg:pr-2 lg:w-2/5 lg:h-10 rounded-lg">
+              <div className="button-second mt-4 z-20 flex justify-center items-center lg:mt-0 lg:pl-2 lg:pr-2 lg:w-2/5 lg:h-10 rounded-lg">
                 <SendIcon className="icon" />
                 <button
-                  className="ml-2 lg:h-10 rounded-lg"
+                  className="ml-2 h-10 lg:h-10 rounded-lg"
                   onClick={handleEmail}
                 >
                   Message
@@ -77,26 +77,25 @@ export const About = () => {
             </div>
           </div>
         </div>
-        <div className="description lg:w-3/5 lg:h-screen lg:flex lg:justify-start lg:items-center lg:flex-col">
-          <h2 className="lg:mb-6 lg:text-lg">
+
+        <div className="description flex flex-col justify-evenly items-start h-[60vh] lg:w-3/5 lg:h-70vh lg:flex lg:justify-center lg:items-center lg:flex-col">
+          <h2 className="text-sm lg:mb-6 lg:text-lg lg:w-4/5">
             Hey, I&apos;m Van Hien Tieu, and I&apos;m all about technology and
             coding. For as long as I can remember, I&apos;ve been immersed in
             the world of coding, turning ideas into digital realities.
           </h2>
-          <h2 className="lg:mb-6 lg:text-lg">
+          <h2 className="text-sm lg:mb-6 lg:text-xl lg:w-4/5">
             In my journey, I&apos;ve worked on impactful projects, collaborated
             with diverse teams. I specialize in front-end development but
             I&apos;m expanding myself to full-stack development with
             technologies such as React, Next.js for front-end, Node.js and
-            Django for back-end to build powerful web application , and I firmly
-            believe that coding has the power to shape the future. Beyond the
+            Django for back-end to build powerful web application. Beyond the
             screen, I love experimenting with new programming languages, playing
             video games and sports. Currently, I&apos;m actively seeking for new
             opportunities to continue developing my coding skills and learning
-            new technologies, I&apos;m eager to collaborate on cutting-edge
-            projects.
+            new technologies.
           </h2>
-          <h2 className="lg:text-lg">
+          <h2 className="text-sm lg:text-lg lg:w-4/5">
             Thanks for stopping by my portfolio. Let&apos;s connect and dive
             into the endless possibilities of technology and coding!
           </h2>
