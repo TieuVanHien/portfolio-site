@@ -2,6 +2,7 @@
 @use './section/' as *;
 @use './scrollbar.scss' as *;
 @use './components' as *;
+@use './blob.scss' as *;
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -72,7 +73,4 @@ html {
 .line {
   background-color: #292929;
   height: 0.1rem;
-}
-.button-second {
-  background-color: #292929;
 }

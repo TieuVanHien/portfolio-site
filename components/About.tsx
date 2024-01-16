@@ -41,27 +41,34 @@ export const About = () => {
       </div>
       <div className="container lg:flex lg:flex-row">
         <div className="card-container lg:h-screen  lg:w-2/5">
-          <div className="card lg:rounded-md lg:p-9 lg:border-solid lg:border-2 lg:border-slate-500 lg:w-4/5 lg:h-3/5">
-            <div className="image lg:flex lg:justify-center lg:h-3/4 lg:w-full">
+          <div className="card lg:rounded-md lg:p-7 lg:border-solid lg:border-2 lg:border-slate-500 lg:w-4/5 lg:h-3/4">
+            <div className="image relative lg:flex lg:flex-col lg:justify-evenly lg:items-center lg:h-4/5 lg:w-full">
               <Image
-                className="lg:w-4/5 rounded-md lg:h-full"
+                className="lg:w-4/5 rounded-md lg:h-4/5 z-20"
                 src={'/profile.jpg'}
                 width={200}
                 height={300}
                 alt="profile card img"
               />
+              <h2 className="lg:text-lg lg:mt-2">Van Hien Tieu</h2>
+              <h3 className="lg:text-sm text-slate-500 ">
+                Software Developer | Web Developer
+              </h3>
+              <div className="blob1 lg:absolute z-10"></div>
+              <div className="blob2 lg:absolute z-10"></div>
+              <div className="blob3 lg:absolute z-10"></div>
             </div>
             <div className="profile lg:mt-10 lg:w-full lg:justify-evenly lg:flex flex-row">
               <div className="button flex justify-center items-center lg:w-2/5 lg:h-10 rounded-lg">
                 <DataObjectIcon />
-                <button className="ml-1 w-full" onClick={handleDownload}>
+                <button className="w-3/5" onClick={handleDownload}>
                   Resume
                 </button>
               </div>
-              <div className="button-second flex justify-center items-center lg:pl-2 lg:pr-2 lg:w-2/5 lg:h-10 rounded-lg">
-                <SendIcon />
+              <div className="button-second z-20 flex justify-center items-center lg:pl-2 lg:pr-2 lg:w-2/5 lg:h-10 rounded-lg">
+                <SendIcon className="icon" />
                 <button
-                  className="ml-1 lg:h-10 rounded-lg"
+                  className="ml-2 lg:h-10 rounded-lg"
                   onClick={handleEmail}
                 >
                   Message
@@ -71,12 +78,12 @@ export const About = () => {
           </div>
         </div>
         <div className="description lg:w-3/5 lg:h-screen lg:flex lg:justify-start lg:items-center lg:flex-col">
-          <h2 className="lg:mb-6">
+          <h2 className="lg:mb-6 lg:text-lg">
             Hey, I&apos;m Van Hien Tieu, and I&apos;m all about technology and
             coding. For as long as I can remember, I&apos;ve been immersed in
             the world of coding, turning ideas into digital realities.
           </h2>
-          <h2 className="lg:mb-6">
+          <h2 className="lg:mb-6 lg:text-lg">
             In my journey, I&apos;ve worked on impactful projects, collaborated
             with diverse teams. I specialize in front-end development but
             I&apos;m expanding myself to full-stack development with
@@ -89,7 +96,7 @@ export const About = () => {
             new technologies, I&apos;m eager to collaborate on cutting-edge
             projects.
           </h2>
-          <h2>
+          <h2 className="lg:text-lg">
             Thanks for stopping by my portfolio. Let&apos;s connect and dive
             into the endless possibilities of technology and coding!
           </h2>
