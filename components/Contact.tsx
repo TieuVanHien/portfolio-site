@@ -154,7 +154,7 @@ export const Contact = () => {
             </button>
           ) : (
             <button
-              className="button-disabled h-12 w-1/2 mt-16 lg:w-1/4 lg:h-12 rounded-lg"
+              className="button-disabled h-12 w-1/2 mt-12 lg:w-1/4 lg:h-12 rounded-lg"
               type="submit"
               disabled={disable}
             >

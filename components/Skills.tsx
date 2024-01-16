@@ -6,14 +6,14 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="skills lg:w-full lg:h-screen lg:flex lg:flex-col lg:justify-start lg:items-center"
+      className="skills mt-8 flex flex-col justify-evenly h-auto lg:w-full lg:h-[90vh] lg:flex lg:flex-col lg:justify-start lg:items-center"
     >
-      <div className="heading flex justify-start items-center lg:h-1/10 lg:w-full lg:mb-8 lg:flex lg:justify-start lg:items-center">
+      <div className="heading h-[20vh] flex justify-start items-center lg:h-[15vh] lg:w-full lg:mb-8 lg:flex lg:justify-start lg:items-center">
         <h1 className="text-2xl lg:text-4xl">Favourite Tech Stacks </h1>
-        <div className="line w-3/5 lg:w-1/4 lg:ml-4"></div>
+        <div className="line w-2/5 ml-4 lg:w-1/4 lg:ml-4"></div>
       </div>
-      <div className="tech mt-12 w-full h-fit lg:mt-0 lg:w-full lg:flex lg:justify-center lg:items-center">
-        <div className="tech-container h-fit flex flex-wrap justify-evenly w-full lg:w-full lg:flex-wrap lg:flex lg:justify-center lg:items-start">
+      <div className="tech h-auto w-full lg:h-screen lg:mt-0 lg:w-full lg:flex lg:justify-center lg:items-center">
+        <div className="tech-container h-fit flex flex-wrap justify-evenly items-start w-full lg:w-full lg:flex-wrap lg:flex lg:justify-center lg:items-start">
           {Data.map((skill, index) => (
             <div
               key={index}
