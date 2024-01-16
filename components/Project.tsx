@@ -31,11 +31,11 @@ export const Project = ({ projects }: ProjectProps) => {
       </div>
       {projects.map((project) => (
         <div
-          className="frame border-solid border-2 rounded-md border-slate-500 p-4 mb-14 flex justify-center flex-col items-center lg:border-none lg:flex-row lg:w-full h-full lg:flex lg:justify-between lg:items-center lg:m-16"
+          className="frame border-solid border-2 rounded-md border-slate-500 p-4 mb-14 flex justify-center flex-col items-center lg:border-none lg:flex-row lg:w-full lg:h-50vh lg:flex lg:justify-between lg:items-center lg:mt-16"
           key={project._id}
         >
           <Image
-            className="image w-full h-52 lg:rounded-lg lg:w-1/2 lg:h-80"
+            className="image w-full h-52 lg:rounded-lg lg:w-1/2 lg:h-full"
             src={project.img.src}
             alt={project.title}
             width={600}

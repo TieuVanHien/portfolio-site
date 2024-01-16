@@ -1,8 +1,6 @@
 import React from 'react';
 import { Layout } from '@/components';
 import '@/styles/globals.scss';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Head from 'next/head';
 
 interface AppProps {

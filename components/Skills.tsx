@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Data } from './imageData';
+import { Data } from '@/data/imageData';
 
 export const Skills = () => {
   return (
