@@ -13,7 +13,7 @@ export const Skills = () => {
         <div className="line w-2/5 ml-4 lg:w-1/4 lg:ml-4"></div>
       </div>
       <div className="tech h-auto w-full lg:h-screen lg:mt-0 lg:w-full lg:flex lg:justify-center lg:items-center">
-        <div className="tech-container h-fit flex flex-wrap justify-evenly items-start w-full lg:w-full lg:flex-wrap lg:flex lg:justify-center lg:items-start">
+        <div className="tech-container h-fit flex justify-center flex-wrap gap-[0.5rem] items-start w-full lg:w-full lg:flex-wrap lg:flex lg:justify-center lg:items-start">
           {Data.map((skill, index) => (
             <div
               key={index}
