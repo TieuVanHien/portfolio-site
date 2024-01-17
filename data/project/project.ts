@@ -22,7 +22,7 @@ const projects: Project[] = [
     title: 'Coversy',
     repo: 'https://github.com/TieuVanHien/coversy',
     img: coversy,
-    live: '',
+    live: 'https://github.com/TieuVanHien/coversy',
     desc: 'Coversy stands as a full-stack application, providing a one-stop solution for businesses focused on instructor management.',
     techstack: [
       { name: 'React', src: ReactIcon },
@@ -54,7 +54,7 @@ const projects: Project[] = [
     title: 'Booking System',
     repo: 'https://github.com/TieuVanHien/booking-system',
     img: booking,
-    live: '',
+    live: 'https://github.com/TieuVanHien/booking-system',
     desc: 'A full-stack application that provides a cutting-edge Booking System, revolutionizing how businesses manage reservations',
     techstack: [
       { name: 'Next.js', src: NextJSIcon },

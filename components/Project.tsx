@@ -52,7 +52,7 @@ export const Project = ({ projects }: ProjectProps) => {
                 >
                   <GitHubIcon sx={{ fontSize: 25 }} />
                 </Link>
-                <Link target="blank" className="repo-link" href={project.repo}>
+                <Link target="blank" className="repo-link" href={project.live}>
                   <OpenInNew sx={{ fontSize: 25 }} />
                 </Link>
               </div>
