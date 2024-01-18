@@ -51,7 +51,7 @@ export const About = () => {
                 alt="profile card img"
               />
               <h2 className="mt-4 text-xl lg:text-lg lg:mt-2">Van Hien Tieu</h2>
-              <h3 className="lg:text-sm text-slate-500 ">
+              <h3 className="lg:text-sm z-20 text-slate-500 ">
                 Software Developer | Web Developer
               </h3>
               <div className="blob1 hidden lg:block lg:absolute z-10"></div>
