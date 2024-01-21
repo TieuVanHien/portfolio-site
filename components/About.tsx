@@ -40,7 +40,7 @@ export const About = () => {
         <div className="line ml-4 w-2/5 lg:w-1/4 lg:ml-4"></div>
       </div>
       <div className="container w-[90%] h-auto flex flex-col justify-center items-center lg:flex lg:justify-center lg:h-85vh lg:flex-row">
-        <div className="card-container w-full h-[75vh] flex justify-center items-center lg:h-[90%]  lg:w-2/5">
+        <div className="card-container w-full h-[80vh] flex justify-center items-center lg:h-[90%]  lg:w-2/5">
           <div className="card rounded-md w-full h-full flex flex-col justify-center items-center lg:p-7 border-solid border-2 border-slate-500 lg:w-4/5 lg:h-full">
             <div className="image flex flex-col justify-center items-center relative lg:flex lg:flex-col lg:justify-evenly lg:items-center lg:h-4/5 lg:w-full">
               <Image
