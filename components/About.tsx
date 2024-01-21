@@ -78,7 +78,7 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="description flex flex-col justify-evenly items-start h-[60vh] lg:w-3/5 lg:h-70vh lg:flex lg:justify-center lg:items-center lg:flex-col">
+        <div className="description flex flex-col justify-evenly mt-6 items-start h-[60vh] lg:mt-0 lg:w-3/5 lg:h-70vh lg:flex lg:justify-center lg:items-center lg:flex-col">
           <h2 className="text-sm lg:mb-6 lg:text-lg lg:w-4/5">
             Hey, I&apos;m Van Hien Tieu, and I&apos;m all about technology and
             coding. For as long as I can remember, I&apos;ve been immersed in
