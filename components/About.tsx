@@ -33,20 +33,20 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="about flex flex-col justify-evenly w-[85%] h-auto mt-16 lg:w-full lg:h-screen lg:flex lg:flex-col lg:items-center lg:justify-evenly"
+      className="about flex flex-col justify-center items-center w-[85%] h-auto mt-16 lg:w-full lg:h-screen lg:flex lg:flex-col lg:items-center lg:justify-evenly"
     >
-      <div className="heading mb-12 flex justify-start items-center lg:h-1/10 lg:w-full lg:mb-8 lg:flex lg:justify-start lg:items-center">
+      <div className="heading mb-12 flex justify-start items-center w-[90%] lg:h-1/10 lg:w-full lg:mb-8 lg:flex lg:justify-start lg:items-center">
         <h1 className="text-2xl lg:text-4xl">About Me</h1>
         <div className="line ml-4 w-2/5 lg:w-1/4 lg:ml-4"></div>
       </div>
-      <div className="container w-full lg:flex lg:h-85vh lg:flex-row">
-        <div className="card-container w-full h-[85vh] flex justify-center items-center lg:h-[90%]  lg:w-2/5">
-          <div className="card rounded-md w-full h-full p-4 flex flex-col justify-center items-center lg:p-7 border-solid border-2 border-slate-500 lg:w-4/5 lg:h-full">
+      <div className="container w-[90%] flex flex-col justify-center items-center lg:flex lg:justify-center lg:h-85vh lg:flex-row">
+        <div className="card-container w-full h-[95vh] flex justify-center items-center lg:h-[90%]  lg:w-2/5">
+          <div className="card rounded-md w-full h-full flex flex-col justify-center items-center lg:p-7 border-solid border-2 border-slate-500 lg:w-4/5 lg:h-full">
             <div className="image flex flex-col justify-center items-center relative lg:flex lg:flex-col lg:justify-evenly lg:items-center lg:h-4/5 lg:w-full">
               <Image
                 className="lg:w-4/5 rounded-md lg:h-4/5 z-20"
                 src={'/profile.jpg'}
-                width={200}
+                width={230}
                 height={300}
                 alt="profile card img"
               />
@@ -78,7 +78,7 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="description flex flex-col justify-evenly items-start h-[60vh] lg:w-3/5 lg:h-70vh lg:flex lg:justify-center lg:items-center lg:flex-col">
+        <div className="description mt-6 flex flex-col justify-evenly items-start h-[60vh] lg:w-3/5 lg:h-70vh lg:flex lg:justify-center lg:items-center lg:flex-col">
           <h2 className="text-sm lg:mb-6 lg:text-lg lg:w-4/5">
             Hey, I&apos;m Van Hien Tieu, and I&apos;m all about technology and
             coding. For as long as I can remember, I&apos;ve been immersed in

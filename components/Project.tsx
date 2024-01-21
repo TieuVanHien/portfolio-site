@@ -23,7 +23,7 @@ export const Project = ({ projects }: ProjectProps) => {
   return (
     <section
       id="projects"
-      className="projects flex flex-col justify-evenly w-full h-auto mt-16 lg:w-full lg:h-auto lg:flex lg:flex-col lg:items-center lg:justify-evenly"
+      className="projects flex flex-col justify-evenly w-[85%] h-auto mt-16 lg:w-full lg:h-auto lg:flex lg:flex-col lg:items-center lg:justify-evenly"
     >
       <div className="heading mb-8 flex justify-start items-center lg:h-1/10 lg:w-full lg:mb-8 lg:flex lg:justify-start lg:items-center">
         <h1 className="text-2xl lg:text-4xl">My Projects</h1>
