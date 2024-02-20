@@ -19,7 +19,7 @@
     "@mui/material": "^5.15.7",
     "@react-three/drei": "^9.97.6",
     "@react-three/fiber": "^8.15.15",
-    "@sendgrid/mail": "^8.1.0",
+    "@sendgrid/mail": "^8.1.1",
     "autoprefixer": "10.4.17",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
