@@ -16,7 +16,7 @@
     "@emotion/styled": "^11.11.0",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@mui/icons-material": "^5.15.6",
-    "@mui/material": "^5.15.7",
+    "@mui/material": "^5.15.10",
     "@react-three/drei": "^9.99.0",
     "@react-three/fiber": "^8.15.15",
     "@sendgrid/mail": "^8.1.1",
