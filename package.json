@@ -18,7 +18,7 @@
     "@mui/icons-material": "^5.15.11",
     "@mui/material": "^5.15.10",
     "@react-three/drei": "^9.99.0",
-    "@react-three/fiber": "^8.15.15",
+    "@react-three/fiber": "^8.15.18",
     "@sendgrid/mail": "^8.1.1",
     "autoprefixer": "10.4.17",
     "eslint": "8.56.0",
