@@ -45,7 +45,7 @@ export const About = () => {
             <div className="image flex flex-col justify-center items-center relative lg:flex lg:flex-col lg:justify-evenly lg:items-center lg:h-4/5 lg:w-full">
               <Image
                 className="lg:w-4/5 rounded-md lg:h-4/5 z-20"
-                src={'/profile.jpg'}
+                src='/profile.jpg'
                 width={230}
                 height={300}
                 alt="profile card img"
