@@ -39,7 +39,7 @@ export const Nav: React.FC<NavProps> = () => {
           src="/logo.png"
           alt="logo"
           className="w-14 h-14 ml-4 lg:w-20 lg:h-20 lg:ml-6"
-          width={90}
+          width={85}
           height={40}
         />
       </div>
