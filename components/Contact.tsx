@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,7 +8,10 @@ import TextField from '@mui/material/TextField';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-export const Contact = () => {
+interface ContactSectionProps {
+  contactRef: React.RefObject<HTMLDivElement>;
+}
+export const Contact = ({ contactRef }: ContactSectionProps) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -51,6 +54,7 @@ export const Contact = () => {
 
   return (
     <section
+      ref={contactRef}
       id="contact"
       className="contact flex flex-col h-auto justify-start lg:h-90vh lg:w-full lg:flex-row lg:flex lg:items-center lg:pt-16"
     >

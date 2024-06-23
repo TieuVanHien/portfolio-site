@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { TypingComponent } from './Typing';
 import { RoboModel } from './Scene';
 
-export const Home = () => {
+interface contactProps {
+  contactRef: React.RefObject<HTMLDivElement>;
+}
+
+export const Home = ({ contactRef }: contactProps) => {
+  const scrollToContact = () => {
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section
       id="home"
@@ -17,7 +26,9 @@ export const Home = () => {
             <TypingComponent />
           </div>
           <div className="info flex justify-end lg:flex lg:justify-end lg:text-lg">
-            <button className="button">Let&#39;s Connect</button>
+            <button className="button" onClick={scrollToContact}>
+              Let&#39;s Connect
+            </button>
           </div>
         </div>
       </div>
