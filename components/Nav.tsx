@@ -36,11 +36,11 @@ export const Nav: React.FC<NavProps> = () => {
     >
       <div className="logo flex justify-center items-center">
         <Image
-          src="https://techstack01.s3.us-west-2.amazonaws.com/logo.svg"
+          src="/logo.png"
           alt="logo"
           className="w-14 h-14 ml-4 lg:w-20 lg:h-20 lg:ml-6"
-          width={100}
-          height={50}
+          width={90}
+          height={40}
         />
       </div>
       <div className="contact-icon flex justify-center items-center lg:flex lg:justify-center lg:items-center lg:mr-8">
