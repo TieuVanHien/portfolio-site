@@ -2,16 +2,16 @@ export const Data = [
   {
     title: 'Looking for new opportunities',
     time: 'Present',
-    desc: 'I am currently seeking new opportunities and am open to exploring new challenges and contributing to open-source projects.'
+    desc: 'I am currently seeking new opportunities and am open to exploring new challenges.'
   },
   {
-    title: 'Full-Stack Developer - Freelance',
-    time: 'Present',
-    desc: 'As a Full-Stack Freelance Web Developer, I specialize in crafting end-to-end web solutions, seamlessly blending front-end aesthetics with robust back-end functionality'
+    title: 'Administrative Assistant - AMTA',
+    time: 'Jan 2024 - May 2024',
+    desc: 'Providing attentive service, offering menu recommendations, accurately processing orders, and efficiently managing guest needs from seating to payment.'
   },
   {
-    title: 'Web Developer - Golden Bell Saigon Ltd',
-    time: 'June 2021 - November 2022',
+    title: 'Server - Golden Bell Saigon Ltd',
+    time: 'Oct 2021 - Oct 2023',
     desc: 'Played a key role in crafting and maintaining visually captivating and user-friendly websites. I collaborated cross-functionally to ensure a seamless digital experience.'
   },
   {
